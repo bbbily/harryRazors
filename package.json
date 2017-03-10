@@ -1,0 +1,31 @@
+{
+  "name": "harry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbbily/harryRazors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbbily/harryRazors/issues"
+  },
+  "homepage": "https://github.com/bbbily/harryRazors#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "css-loader": "^0.27.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "style-loader": "^0.13.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.2.1"
+  }
+}
