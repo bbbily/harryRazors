@@ -10,23 +10,24 @@ angular.module("main", ["ui.router"])
         templateUrl: "views/home/home.html"
       })
       .state("products", {
-        url: "products",
+        url: "/products",
         templateUrl: "views/products/products.html"
       })
       .state("shavePlans", {
-        url: "shavePlans",
+        url: "/shavePlans",
         templateUrl: "views/shavePlans/shavePlans.html"
       })
       .state("ourStory", {
-        url: "ourStory",
+        url: "/ourStory",
         templateUrl: "views/ourStory/ourStory.html"
       })
       .state("help", {
-        url: "help",
+        url: "/help",
         templateUrl: "views/help/help.html"
       })
       .state("profile", {
-        url: "profile",
+        url: "/profile",
         templateUrl: "views/profile/profile.html"
-      })
+      });
+      $urlRouterProvider.otherwise("/");
   })

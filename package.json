@@ -24,8 +24,11 @@
     "style-loader": "^0.13.2"
   },
   "devDependencies": {
+    "file-loader": "^0.10.1",
+    "image-webpack-loader": "^3.2.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.3",
+    "url-loader": "^0.5.8",
     "webpack": "^2.2.1"
   }
 }

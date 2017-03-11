@@ -1,0 +1,36 @@
+.circles ul {
+  display: flex;
+  list-style-type: none;
+
+}
+
+.circles ul li {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid white;
+}
+.circles ul li:hover {
+  border: 1px solid gray;
+}
+
+.circles ul li a {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.brown a {
+  background-color: #ED7B20;
+}
+.blue a {
+  background-color: #0A4D6D;
+}
+.gray a {
+  background-color: #707C3C;
+}
