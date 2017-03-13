@@ -26,3 +26,10 @@ CREATE table products (
         shipping_zipcode integer,
         tele integer
     )
+
+create table cart (
+  cart_id SERIAL PRIMARY KEY,
+  user_id integer,
+  product_id integer,
+  product_quantity integer
+)

@@ -2,7 +2,7 @@
   <div class="create-account">
     <form>
       <h3>Create Account</h3>
-      <input type="email" placeholder="Email Address">
+      <input type="email" placeholder="Email Address" ng-model="registerEmail">
       <div class="new-cus">
         <span class="on-focus"></span>
         <span class="on-focus-text"> new customers</span>
@@ -14,13 +14,13 @@
         <span class="on-blur"></span>
         <span class="on-blur-text"></span>
       </div>
-      <input type="password">
+      <input type="password" ng-model="registerPassword">
       <p>Minimum 8 characters</p>
-      <input type="submit" value="create account">
-      <a>Sign in with Facebook</a>
+      <input type="submit" value="create account" ng-click="register()">
+      <a ng-click="goFacebook()">Sign in with Facebook</a>
     </form>
   </div>
-  <div class="create-account">
+  <div class="login-account">
     <form>
       <h3>Sign In</h3>
       <input type="email" placeholder="Email Address" ng-model="signInEmail">
@@ -35,7 +35,7 @@
       <input type="password" ng-model="signInPassword">
       <p>Minimum 8 characters</p>
       <input type="submit" value="sign in" ng-click="login()">
-      <a>Sign in with Facebook</a>
+      <a href="/auth/facebook/callback">Sign in with Facebook</a>
       <a>forgot password?</a>
     </form>
   </div>

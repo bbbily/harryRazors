@@ -18,4 +18,22 @@ angular.module("main").service("productsSvc", function($http) {
       }
     })
   }
+
+  this.addUser = function(registerEmail, registerPassword) {
+    return $http({
+      method: "POST",
+      url: "/register",
+      data: {
+        email: registerEmail,
+        password: registerPassword
+      }
+    })
+  }
+
+  this.goFacebook = function() {
+    return $http({
+      method: "GET",
+      url: "/auth/facebook"
+    })
+  }
 })

@@ -5,12 +5,13 @@ var massive = require("massive");
 var config = require("./config");
 var session = require("express-session");
 var app = module.exports = express();
-var passport = require("./service/passport");
 var conn = massive.connectSync({
   connectionString: "postgres://postgres:@localhost/harry"
 });
 app.set("db", conn);
+var passport = require("./service/passport");
 var productsCtrl = require("./controllers/productsCtrl");
+var usersCtrl = require("./controllers/usersCtrl")
 var port = config.port;
 
 
@@ -35,15 +36,14 @@ app.post("/auth/local", passport.authenticate("local", {
   successRedirect: "/me",
   failureRedirect: "/login"
 }));
+app.post("/register", usersCtrl.register);
+app.post("/update", usersCtrl.updateProfile);
 app.get("/api/products", productsCtrl.getAll);
 app.get("/api/user", function(req, res) {
   res.send({})
 })
 
-app.get("/me", function(req, res) {
-  console.log(req.user);
-  res.send(req.user);
-})
+app.get("/me", usersCtrl.isAuthed, usersCtrl.me)
 
 // passport.serializeUser(function(profile, done) {
 //   done(null, profile);
