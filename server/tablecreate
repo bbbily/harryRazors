@@ -1,0 +1,28 @@
+CREATE table products (
+    id SERIAL PRIMARY KEY,
+    type text,
+    name text,
+    price integer,
+    alternative_color boolean,
+    tag_text text,
+    tag_color text,
+    default_imgurl text,
+    blue_imgurl text,
+    green_imgurl text
+    );
+
+
+    CREATE table users (
+        user_id SERIAL PRIMARY KEY,
+        email text,
+        password text,
+        facebook_id integer,
+        user_name varchar(40),
+        shipping_name varchar(40),
+        shipping_address text,
+        shipping_aptnum integer,
+        shipping_city varchar(40),
+        shipping_state varchar(2),
+        shipping_zipcode integer,
+        tele integer
+    )

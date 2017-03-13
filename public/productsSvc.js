@@ -7,4 +7,15 @@ angular.module("main").service("productsSvc", function($http) {
       return result;
     })
   }
+
+  this.getUser = function(signInEmail, signInPassword) {
+    return $http({
+      method: "POST",
+      url: "/auth/local",
+      data: {
+        email: signInEmail,
+        password: signInPassword
+      }
+    })
+  }
 })
