@@ -1,8 +1,8 @@
-var webpack = require("webpack")
+var webpack = require("webpack");
 module.exports = {
-  entry: "./index.js",
+  entry: "./public/set.js",
   output: {
-    filename: "./index.min.js"
+    filename: "./public/set.min.js"
   },
   module: {
     loaders: [

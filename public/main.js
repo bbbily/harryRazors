@@ -11,7 +11,8 @@ angular.module("main", ["ui.router"])
       })
       .state("products", {
         url: "/products",
-        templateUrl: "views/products/products.html"
+        templateUrl: "views/products/products.html",
+        controller: "productsCtrl"
       })
       .state("shavePlans", {
         url: "/shavePlans",

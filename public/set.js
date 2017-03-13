@@ -1,0 +1,9 @@
+require("./main.js");
+require("./productsSvc.js");
+require("./directives/nav/nav.js");
+require("../reset.css");
+require("./directives/nav/nav.scss");
+require("./directives/startTrial/startTrial.js");
+require("./directives/colorCircle/colorCircle.js");
+require("./directives/colorCircle/colorCircle.css");
+require("./views/products/productsCtrl.js");

@@ -1,0 +1,12 @@
+CREATE table products (
+    id SERIAL PRIMARY KEY,
+    type text,
+    name text,
+    price integer,
+    alternative_color boolean,
+    tag_text text,
+    tag_color text,
+    default_imgurl text,
+    blue_imgurl text,
+    green_imgurl text
+    );
