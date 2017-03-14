@@ -30,18 +30,18 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get("/auth/facebook", passport.authenticate("facebook"));
 app.get("/auth/facebook/callback", passport.authenticate("facebook", {
   successRedirect: "/#!/details",
-  failureRedirect: "/login"
+  failureRedirect: "/#!/signIn"
 }));
 app.post("/auth/local", passport.authenticate("local", {
   successRedirect: "/me",
-  // failureRedirect: "/login"
+  // failureRedirect: "/me"
 }));
 app.post("/register", usersCtrl.register);
 app.post("/update", usersCtrl.updateProfile);
-app.get("/api/products", productsCtrl.getAll);
-app.get("/api/user", function(req, res) {
-  res.send({})
-})
+app.get("/products", productsCtrl.getAll);
+// app.get("/api/user", function(req, res) {
+//   res.send({})
+// })
 
 app.get("/me", usersCtrl.isAuthed, usersCtrl.me);
 app.get("/logout", usersCtrl.logout);

@@ -35,7 +35,7 @@ module.exports = {
   },
 
   me: function(req, res, next) {
-    if (!req.user) return res.status(400).send();
+    if (!req.user) return res.status(200).send("no user");
     return res.status(200).send(req.user);
   },
 

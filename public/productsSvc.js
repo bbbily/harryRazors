@@ -9,7 +9,7 @@ angular.module("main").service("productsSvc", function($http) {
   this.getAll = function() {
     return $http({
       method: "GET",
-      url: "/api/user"
+      url: "/products"
     }).then(function(result) {
       return result;
     })
@@ -24,7 +24,10 @@ angular.module("main").service("productsSvc", function($http) {
         password: signInPassword
       }
     }).then(function(result) {
+      console.log("d", result)
       return result.data;
+    }).catch(function(err) {
+      console.log(err)
     })
   }
 
@@ -45,11 +48,12 @@ angular.module("main").service("productsSvc", function($http) {
       url: "/me"
     }).then(function(result) {
       console.log("getbackfromfacbok", result);
-      return result;
-    }).catch(function(err) {
-      console.log(err);
-      return err;
+      return result.data;
     })
+    // .catch(function(err) {
+    //   console.log(err);
+    //   return err;
+    // })
   }
 
   this.logoutUser = function() {

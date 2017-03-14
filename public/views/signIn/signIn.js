@@ -1,9 +1,16 @@
-angular.module("main").controller("signInCtrl", function($scope, productsSvc) {
+angular.module("main").controller("signInCtrl", function($scope, productsSvc, $state) {
   $scope.login = function() {
     productsSvc.getUser($scope.signInEmail, $scope.signInPassword).then(function(result) {
-      console.log(result);
+      console.log("user", result);
       $scope.user = result;
-      $scope.hasUser = true;
+      if ($scope.user) {
+        console.log("go");
+        $state.go("details");
+      } else {
+        $scope.signInEmail = "";
+        $scope.signInPassword = "";
+
+      }
     })
   }
 
@@ -12,6 +19,7 @@ angular.module("main").controller("signInCtrl", function($scope, productsSvc) {
       console.log(result);
     })
   }
+
 
   // $scope.hasUser = productsSvc.getHasUser();
   // $scope.goFacebook = function() {

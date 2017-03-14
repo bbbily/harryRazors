@@ -24,9 +24,8 @@ passport.use(new localStrategy({
   email = email.toLowerCase();
   // return done(null, {user: "nouser"});
   db.check_email([email], function(err, user) {
-    console.log(email)
     if (err) done(err);
-    if (!user[0]) return done(null,false);
+    if (!user[0]) return done(null, false);
     if (verifyPassword(password, user[0].password)) {
     // if (user[0].password == password) {
       delete user[0].password;
