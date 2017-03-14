@@ -1,6 +1,7 @@
 require("./main.js");
 require("./productsSvc.js");
 require("./views/signIn/signIn.js");
+require("./views/profile/details.js");
 require("./directives/nav/nav.js");
 require("../reset.css");
 require("./directives/nav/nav.scss");

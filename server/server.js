@@ -29,12 +29,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/auth/facebook", passport.authenticate("facebook"));
 app.get("/auth/facebook/callback", passport.authenticate("facebook", {
-  successRedirect: "/me",
+  successRedirect: "/#!/details",
   failureRedirect: "/login"
 }));
 app.post("/auth/local", passport.authenticate("local", {
   successRedirect: "/me",
-  failureRedirect: "/login"
+  // failureRedirect: "/login"
 }));
 app.post("/register", usersCtrl.register);
 app.post("/update", usersCtrl.updateProfile);
@@ -43,8 +43,8 @@ app.get("/api/user", function(req, res) {
   res.send({})
 })
 
-app.get("/me", usersCtrl.isAuthed, usersCtrl.me)
-
+app.get("/me", usersCtrl.isAuthed, usersCtrl.me);
+app.get("/logout", usersCtrl.logout);
 // passport.serializeUser(function(profile, done) {
 //   done(null, profile);
 // })

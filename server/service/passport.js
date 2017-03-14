@@ -13,7 +13,7 @@ function verifyPassword(reqBodyPassword, userPassword) {
 }
 
 passport.use(new facebookStrategy(config.authClient, function(token, refreshToken, user, done) {
-  console.log(user);
+  // console.log(user);
   return done(null, user);
 }))
 

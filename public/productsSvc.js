@@ -1,4 +1,11 @@
 angular.module("main").service("productsSvc", function($http) {
+  var hasUser = false;
+  this.setHasUser = function(boolean) {
+    hasUser = boolean;
+  }
+  this.getHasUser = function() {
+    return hasUser;
+  }
   this.getAll = function() {
     return $http({
       method: "GET",
@@ -16,6 +23,8 @@ angular.module("main").service("productsSvc", function($http) {
         email: signInEmail,
         password: signInPassword
       }
+    }).then(function(result) {
+      return result.data;
     })
   }
 
@@ -33,7 +42,22 @@ angular.module("main").service("productsSvc", function($http) {
   this.goFacebook = function() {
     return $http({
       method: "GET",
-      url: "/auth/facebook"
+      url: "/me"
+    }).then(function(result) {
+      console.log("getbackfromfacbok", result);
+      return result;
+    }).catch(function(err) {
+      console.log(err);
+      return err;
+    })
+  }
+
+  this.logoutUser = function() {
+    return $http({
+      method: "GET",
+      url: "/logout"
+    }).then(function(result) {
+      console.log("servicelogout", result)
     })
   }
 })

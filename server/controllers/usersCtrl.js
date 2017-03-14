@@ -11,9 +11,10 @@ function hashPassword(password) {
 
 module.exports = {
   isAuthed: function(req, res, next) {
-    if (!req.isAuthenticated()) return res.status(401).send();
-    return next();
+    if (!req.isAuthenticated()) return res.status(401).send("can not get user before login");
+    else return next();
   },
+
   register: function(req, res, next) {
     var newUser = req.body;
     newUser.password = hashPassword(newUser.password);
@@ -32,9 +33,12 @@ module.exports = {
       }
     })
   },
+
   me: function(req, res, next) {
+    if (!req.user) return res.status(400).send();
     return res.status(200).send(req.user);
   },
+
   updateProfile: function(req, res, next) {
     var updateUser = req.body;
     updateUser.user_id = req.user.user_id;
@@ -44,5 +48,10 @@ module.exports = {
       req.user = user;
       res.status(200).send(user);
     })
+  },
+
+  logout: function(req, res, next) {
+    req.logout();
+    return res.status(200).send("log out");
   }
 }

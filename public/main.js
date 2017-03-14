@@ -27,9 +27,14 @@ angular.module("main", ["ui.router"])
         url: "/help",
         templateUrl: "views/help/help.html"
       })
-      .state("profile", {
-        url: "/profile",
-        templateUrl: "views/profile/profile.html"
+      .state("history", {
+        url: "/history",
+        templateUrl: "views/profile/history.html"
+      })
+      .state("details", {
+        url: "/details",
+        templateUrl: "views/profile/details.html",
+        controller: "detailsCtrl"
       });
       $urlRouterProvider.otherwise("/");
   })
