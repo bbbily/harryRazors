@@ -4,34 +4,22 @@
     <p>All you need to get shaving with Harry’s – in one tidy box.</p>
   </div>
   <div class="starter-info products-info">
-    <div>
+    <div ng-repeat="product in sets">
       <a>
         <div class="item-image">
-          <img src="images/products/94849e8c3594aede6ac5383e90c1bba37ac2a8d3.jpg" alt="item-image">
+          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="color == 'brown'">
+          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="color == 'blue'">
+          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="color == 'green'">
         </div>
         <div class="item-info">
-          <span>$15</span>
+          <span>${{product.price}}</span>
           <span>  |  </span>
-          <span> Truman Set </span>
+          <span> {{product.name}} </span>
         </div>
-        <color-circle-dir></color-circle-dir>
-        <span>most popular</span>
+        <color-circle-dir ng-show="product.color"></color-circle-dir>
+        <span ng-show="product.tag_text">{{product.tag_text}}</span>
       </a>
     </div>
-    <div>
-      <a>
-        <div class="item-image">
-          <img src="images/products/e0a7a78118eca9ff10d8a4b683ac39ff429d5b7a.jpg" alt="item-image">
-        </div>
-        <div class="item-info">
-          <span>$25</span>
-          <span>  |  </span>
-          <span> Winston Set </span>
-        </div>
-        <span>engravable</span>
-      </a>
-    </div>
-
   </div>
 </section>
 
@@ -41,9 +29,45 @@
     <p>Get more shaving essentials.</p>
   </div>
   <div class="products-info">
-    <div>
+    <div ng-repeat="product in bladesAndPacks">
       <a>
+        <div class="item-image">
+          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="color == 'brown'">
+          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="color == 'blue'">
+          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="color == 'green'">
+        </div>
+        <div class="item-info">
+          <span>${{product.price}}</span>
+          <span>  |  </span>
+          <span> {{product.name}} </span>
+        </div>
+        <color-circle-dir ng-show="product.color"></color-circle-dir>
+        <span ng-show="product.tag_text">{{product.tag_text}}</span>
+      </a>
+    </div>
+  </div>
+</section>
 
+<section class="supplies">
+  <div class="products-text">
+    <h5>Grooming supplies</h5>
+    <p>Products designed to help you make your morning easier.</p>
+  </div>
+  <div class="products-info">
+    <div ng-repeat="product in supplies">
+      <a>
+        <div class="item-image">
+          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="color == 'brown'">
+          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="color == 'blue'">
+          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="color == 'green'">
+        </div>
+        <div class="item-info">
+          <span>${{product.price}}</span>
+          <span>  |  </span>
+          <span> {{product.name}} </span>
+        </div>
+        <color-circle-dir ng-show="product.color"></color-circle-dir>
+        <span ng-show="product.tag_text">{{product.tag_text}}</span>
       </a>
     </div>
   </div>

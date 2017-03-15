@@ -38,3 +38,46 @@ insert into products
 (default_img, blue_img, green_img)
 values('https://s3.amazonaws.com/harrypics/newpro/products/94849e8c3594aede6ac5383e90c1bba37ac2a8d3.jpg', 'https://s3.amazonaws.com/harrypics/newpro/products/520cf74e3af959a832fd6a1c4bbc829db9e98e8d.jpg', 'https://s3.amazonaws.com/harrypics/newpro/products/c3f11094c1c83c9f3fc2c2760ddd45b3fec8bb12.jpg'
        )
+
+       insert into products
+       (type, name, price, tag_text, tag_color, quantity, gelorcream, default_img, description)
+       values('starter sets', 'winston set', 25, 'ENGRAVABLE', 'blue', true, true, 'images/products/e0a7a78118eca9ff10d8a4b683ac39ff429d5b7a.jpg', 'This set has all you need to get started with Harry''s. A great shave at a fair price.')
+
+
+       insert into products
+       (type, name, price, quantity, packsize, default_img, description)
+       values('Blades & Refill Packs', 'Harry''s Blades', 2, true, true, 'images/products/598c604085810cbdda46813db38ed1ba69567a8e.jpg',
+              'Each cartridge comes with 5 German blades, a flex hinge, a lubricating strip, and a precision trimmer. Designed to custom fit with Harry''s handles for a close, comfortable shave.'
+              ),
+              ('Blades & Refill Packs', 'Blades & Shave Gel', 28, true, false, 'images/products/6341899cc4c5c66320624487443a25d42a012fb7.jpg',
+               'A convenient refill set of Harry''s shave products.'),
+               ('Blades & Refill Packs', 'Blades, Shave Gel & Post Shave Balm', 33, true, false, 'images/products/f0cbf4a05a7197f77f74162a4333b28d39a8fb5e.jpg',
+                'A convenient refill set of Harry''s shave products, plus some added protection.')
+
+                insert into products
+                (type, name, price, quantity, size, default_img, description)
+                values('Grooming Supplies', 'The Winston', 20, true, false, 'images/products/706bd996ca4442dd17cdc06bd0bc6d347798a18d.jpg',
+                       'Made of zinc with a polished chrome body and strategically placed grips, the Winston is designed for effortless glide and precise control.'),
+                       ('Grooming Supplies', 'Foaming Shave Gel', 4, true, true, 'images/products/c0d20001a49d9ecd3fad5e77d9cd3431b0f87356.jpg',
+                        'Our foaming shave gel lathers up to help your razor glide smoothly over your skin, ensuring a close and comfortable shave.'),
+                        ('Grooming Supplies', 'Shave Cream', 8, true, true, 'images/products/e4930570e3fcd0511847f475e06d9235399da306.jpg',
+                         'Our shave cream with a blend of 12 natural ingredients delivers an effortless glide, ensuring a close and comfortable shave.'),
+                         ('Grooming Supplies', 'Post Shave Balm', 8, true, true, 'images/products/209392ef8071b025b52d3854d9f397405e1f6755.jpg',
+                          'Get immediate relief after shaving. Our soothing formula with natural ingredients moisturizes skin and helps reduce redness.'),
+                          ('Grooming Supplies', 'Daily Face Wash', 7, true, false, 'images/products/1408f112898707225cab17bea694e13b32d05511.jpg',
+                           'A non-drying, gentle exfoliator that''s perfect for daily use—whether you''re shaving or not. It lathers up for a deep clean, leaving your skin feeling fresh.'),
+                           ('Grooming Supplies', 'Daily Face Lotion SPF 15', 8, true, false, 'images/products/e5a84fdbaee465509c66cf140b870c175a4b18d1.jpg',
+                            'Light, daily face lotion with SPF 15 that instantly hydrates and protects skin without leaving any greasy residue.'),
+                            ('Grooming Supplies', 'Lip Balm SPF 15', 9, true, false, 'images/products/ce53b71356b173254eaa84192aa38352914f5a20.jpg',
+                             'Moisturizing lip balm with SPF 15 protection that immediately relieves dry lips with a peppermint-y flavor and no-shine finish.'),
+                             ('Grooming Supplies', 'Harry''s Travel Kit', 25, true, false, 'images/products/6f33df53c334c2bedde150ae038c8fbd97132aa8.jpg',
+                              'Specially-designed for optimal packing and to contain spills, this Italian cotton-nylon travel kit is perfect for every guy on the go.')
+
+                              insert into products
+                            (type, name, price, quantity, packsize, color, default_img, blue_img, green_img, description)
+                            values('Grooming Supplies', 'Harry''s Blades', 2, false, true, false, 'images/products/598c604085810cbdda46813db38ed1ba69567a8e.jpg', null, null,
+                                   'Each cartridge comes with 5 German blades, a flex hinge, a lubricating strip, and a precision trimmer. Designed to custom fit with Harry''s handles for a close, comfortable shave.'),
+                                   ('Grooming Supplies', 'Harry''s Razor Stand', 15, true, false, false, 'images/products/db54937b47193ac45b801135ac61061c29df0f1d.jpg', null, null,
+                                    'Designed to keep your blades dry and on display, this anodized aluminum stand has a minimal feel with a lot of function (there''s even a built-in grip at the base to prevent slipping). One size fits all Harry''s razors.'),
+                                    ('Grooming Supplise', 'The Truman', 9, true, false, true, 'iamges/products/42e223daae8eb2f42f0cf84b215b42e00c58d321.jpg', 'images/products/9bea977db558d3bc2c576bb2074812637c77bbbc.jpg', 'images/products/a357c363edbb857290450776cf62368062074254.jpg',
+                                     'The Truman has a weighted core, texturized grip, and rubberized body for maximum control.')

@@ -70,10 +70,10 @@ angular.module("main").service("productsSvc", function($http) {
 
   //////////////////////product function/////////////////////////////
 
-  this.getSets = function(sets, data) {
-    sets = data.filter(function(product) {
-      return product.type == "starter sets"
-    })
-    console.log(sets);
+  this.getType = function(data, text) {
+    var result = data.filter(function(product) {
+      return product.type == text;
+    });
+    return result;
   }
 })
