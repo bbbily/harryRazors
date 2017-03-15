@@ -4,9 +4,9 @@ var db = app.get("db");
 
 module.exports = {
   getAll: function(req, res) {
-    db.read_products(function(err, result) {
+    db.read_products(function(err, products) {
       if (err) console.log(err)
-      else res.send(result);
+      else res.send(products);
     })
   }
 }

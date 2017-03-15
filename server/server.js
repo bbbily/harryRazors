@@ -33,24 +33,16 @@ app.get("/auth/facebook/callback", passport.authenticate("facebook", {
   failureRedirect: "/#!/signIn"
 }));
 app.post("/auth/local", passport.authenticate("local", {
-  successRedirect: "/me",
+  successRedirect: "/me"
   // failureRedirect: "/me"
 }));
 app.post("/register", usersCtrl.register);
 app.post("/update", usersCtrl.updateProfile);
 app.get("/products", productsCtrl.getAll);
-// app.get("/api/user", function(req, res) {
-//   res.send({})
-// })
 
 app.get("/me", usersCtrl.isAuthed, usersCtrl.me);
 app.get("/logout", usersCtrl.logout);
-// passport.serializeUser(function(profile, done) {
-//   done(null, profile);
-// })
-// passport.deserializeUser(function(dataFromSession, done) {
-//   done(null, dataFromSession);
-// })
+
 
 app.listen(port, function() {
   console.log("listen to port: " + port);

@@ -1,3 +1,3 @@
 insert into users
-  (email, password)
-  values($1, $2);
+  (email, password, facebook_id, user_name)
+  values($1, $2, $3, $4);

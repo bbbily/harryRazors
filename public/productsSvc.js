@@ -11,7 +11,7 @@ angular.module("main").service("productsSvc", function($http) {
       method: "GET",
       url: "/products"
     }).then(function(result) {
-      return result;
+      return result.data;
     })
   }
 
@@ -24,10 +24,10 @@ angular.module("main").service("productsSvc", function($http) {
         password: signInPassword
       }
     }).then(function(result) {
-      console.log("d", result)
+      // console.log("d", result)
       return result.data;
     }).catch(function(err) {
-      console.log(err)
+      console.log("err", err)
     })
   }
 
@@ -42,12 +42,12 @@ angular.module("main").service("productsSvc", function($http) {
     })
   }
 
-  this.goFacebook = function() {
+  this.goMe = function() {
     return $http({
       method: "GET",
       url: "/me"
     }).then(function(result) {
-      console.log("getbackfromfacbok", result);
+      // console.log("getbackfromfacbok", result);
       return result.data;
     })
     // .catch(function(err) {
@@ -63,5 +63,17 @@ angular.module("main").service("productsSvc", function($http) {
     }).then(function(result) {
       console.log("servicelogout", result)
     })
+  }
+
+
+
+
+  //////////////////////product function/////////////////////////////
+
+  this.getSets = function(sets, data) {
+    sets = data.filter(function(product) {
+      return product.type == "starter sets"
+    })
+    console.log(sets);
   }
 })

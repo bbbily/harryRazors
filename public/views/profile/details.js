@@ -1,10 +1,10 @@
 angular.module("main").controller("detailsCtrl", function($scope, productsSvc) {
-  $scope.goFacebook = function() {
-    productsSvc.goFacebook().then(function(result) {
+  $scope.goMe = function() {
+    productsSvc.goMe().then(function(result) {
       console.log('hyu',result);
     })
   }
-  $scope.goFacebook();
+  $scope.goMe();
   productsSvc.setHasUser(true);
 
   $scope.signOut = function() {

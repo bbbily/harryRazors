@@ -12,9 +12,19 @@ function verifyPassword(reqBodyPassword, userPassword) {
   return bcrypt.compareSync(reqBodyPassword, userPassword);
 }
 
-passport.use(new facebookStrategy(config.authClient, function(token, refreshToken, user, done) {
-  // console.log(user);
-  return done(null, user);
+passport.use(new facebookStrategy(config.authClient, function(token, refreshToken, fbuser, done) {
+  db.check_facebook_id([fbuser.id], function(err, dbuser) {
+    if (err) done(err);
+    if (!dbuser[0])
+      db.add_user([null, null, fbuser.id, fbuser.displayName], function(err, user) {
+        if (err) done(err);
+        console.log("fackbookuser", user);
+      })
+    else
+      fbuser = dbuser[0];
+      console.log(fbuser)
+      return done(null, fbuser);
+  })
 }))
 
 passport.use(new localStrategy({
@@ -27,7 +37,6 @@ passport.use(new localStrategy({
     if (err) done(err);
     if (!user[0]) return done(null, false);
     if (verifyPassword(password, user[0].password)) {
-    // if (user[0].password == password) {
       delete user[0].password;
       return done(null,user[0]);
     }
