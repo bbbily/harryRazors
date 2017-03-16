@@ -81,3 +81,70 @@ values('https://s3.amazonaws.com/harrypics/newpro/products/94849e8c3594aede6ac53
                                     'Designed to keep your blades dry and on display, this anodized aluminum stand has a minimal feel with a lot of function (there''s even a built-in grip at the base to prevent slipping). One size fits all Harry''s razors.'),
                                     ('Grooming Supplise', 'The Truman', 9, true, false, true, 'iamges/products/42e223daae8eb2f42f0cf84b215b42e00c58d321.jpg', 'images/products/9bea977db558d3bc2c576bb2074812637c77bbbc.jpg', 'images/products/a357c363edbb857290450776cf62368062074254.jpg',
                                      'The Truman has a weighted core, texturized grip, and rubberized body for maximum control.')
+
+
+
+
+                                     create table singleproductpics (
+                                       id SERIAL PRIMARY KEY,
+                                       product_id integer,
+                                       name text,
+                                       index integer,
+                                         size text,
+                                         img_url text,
+                                         color text,
+                                         gelorcream text
+                                     )
+                                     insert into singleproductpics
+                                     (product_id, name, index, size, img_url, color, gelorcream)
+                                     values( 1, 'Truman Set', 0, 'small', 'images/singleProduct/b631304ad383652022c943692cda6c67cde3e695.jpg', 'default', 'gel'),
+                                     ( 1, 'Truman Set', 0, 'small', 'images/singleProduct/04f071ce50d036e697a6be7cb69dbb1310334a96.jpg', 'default', 'cream'),
+                                     (1, 'Truman Set', 1, 'small', 'images/singleProduct/f03e18a13a0cd1d9cbaa89192e11e59b042fded9.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 2, 'small', 'images/singleProduct/121b40b7e06cc811b0fb8906c36fbed6e20ff366.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 3, 'small', 'images/singleProduct/fced26797580abea54521828412db316147e50b4.jpg', 'default', 'gel'),
+                                     (1, 'Truman Set', 3, 'small', 'images/singleProduct/a3bf0377478b04fc805d6b9e52f145851f874d2c.jpg', 'default', 'cream'),
+                                     (1, 'Truman Set', 4, 'small', 'images/singleProduct/0be009bf9e98ef7d5d7c05a16802815301630a39.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 5, 'small', 'images/singleProduct/f93e192859651abf3c74b22b14930f86f014778f.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 0, 'small', 'images/singleProduct/8d2fc5f7f926e547d7866a0b15ae7505e4688046.jpg', 'default', 'gel'),
+                                     (1, 'Truman Set', 0, 'small', 'images/singleProduct/0e9d1eb1c6ea46ff59d6eee9c2bfbe61266da2db.jpg', 'default', 'cream'),
+                                     (1, 'Truman Set', 1, 'small', 'images/singleProduct/0fe1cd9fb00e545a66d809384e12181cb6131866.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 2, 'small', 'images/singleProduct/c8b0a8efa08ed4e652af69394b125dcf4efca972.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 3, 'small', 'images/singleProduct/7874d95e9b64f008336445a4a18ad0879f4a4944.jpg', 'default', 'gel'),
+                                     (1, 'Truman Set', 3, 'small', 'images/singleProduct/983540cc832bbafcf67fe2cf1c907f91308b531f.jpg', 'default', 'cream'),
+                                     (1, 'Truman Set', 4, 'small', 'images/singleProduct/f89fee9ef4ecb31d72dae07438332da441565333.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 5, 'small', 'images/singleProduct/fdcf773730a14a5a3d13c927f3ecd8e8f0b48942.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 0, 'small', 'images/singleProduct/9656547c5bc4ed5c2ed716b223eac5bd91052577.jpg', 'default', 'gel'),
+                                     (1, 'Truman Set', 0, 'small', 'images/singleProduct/9b2ad4c9acfe3f58d45737005db0eaf44d394ed4.jpg', 'default', 'cream'),
+                                     (1, 'Truman Set', 1, 'small', 'images/singleProduct/08ac9d93a0658601f45b4a69eb38c96a7e5e8c44.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 2, 'small', 'images/singleProduct/41727b02df598c4c7b45f548ec385d797d86b403.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 3, 'small', 'images/singleProduct/bbb59299d0bb822191993ff51b1e916474ab3ecb.jpg', 'default', 'gel'),
+                                     (1, 'Truman Set', 3, 'small', 'images/singleProduct/c77d8b5241a240f4752c21af2f513587d45468f3.jpg', 'default', 'cream'),
+                                     (1, 'Truman Set', 4, 'small', 'images/singleProduct/b277022d1c5ada6c21d7a0528f9ea7950c5c0011.jpg', 'default', 'both'),
+                                     (1, 'Truman Set', 5, 'small', 'images/singleProduct/eb923ac29b5eda490bf19d35859c7bf6649f8ffa.jpg', 'default', 'both')
+
+                                     insert into singleproductpics
+                                     (product_id, name, index, size, img_url, color, gelorcream)
+                                     values( 1, 'Truman Set', 0, 'small', 'images/singleProduct/b631304ad383652022c943692cda6c67cde3e695.jpg', 'default', 'gel'),
+                                                                          ( 1, 'Truman Set', 0, 'small', 'images/singleProduct/546e51e650619da81caf52ad1dc90e1f5f16ce29.jpg', 'default', 'cream'),
+                                                                          (1, 'Truman Set', 1, 'small', 'images/singleProduct/3ab5a1caee0a26b9c76b4016cdb8825b68a49505.jpg', 'default', 'both'),
+                                                                          (1, 'Truman Set', 2, 'small', 'images/singleProduct/f12ad5e2a4634aebc03c5f6464453ca744f559ba.jpg', 'default', 'both'),
+                                                                          (1, 'Truman Set', 3, 'small', 'images/singleProduct/8c493e7a5f2d5a0c3180d9a34c1a72122072d278.jpg', 'default', 'gel'),
+                                                                          (1, 'Truman Set', 3, 'small', 'images/singleProduct/52aaf3342022280e02949fe3f99a70d89ddbe4c2.jpg', 'default', 'cream'),
+                                                                          (1, 'Truman Set', 4, 'small', 'images/singleProduct/7d541a76f1af9203d4d21b77e368c52f3d65accd.jpg', 'default', 'both'),
+                                                                          (1, 'Truman Set', 5, 'small', 'images/singleProduct/81dea28882679a2ed4d13ab23506d3f68b048a0b.jpg', 'default', 'both'),
+                                                                          (1, 'Truman Set', 0, 'small', 'images/singleProduct/1aced206e8bdfb6e47c6dd3cbc81b0f16cb32d8e.jpg', 'blue', 'gel'),
+                                                                          (1, 'Truman Set', 0, 'small', 'images/singleProduct/fa2de1487a5cc343005385cd7754c5ff696bfd73.jpg', 'blue', 'cream'),
+                                                                          (1, 'Truman Set', 1, 'small', 'images/singleProduct/9588c4fc4cf58471ce9b4e211ce2e56f6212acb9.jpg', 'blue', 'both'),
+                                                                          (1, 'Truman Set', 2, 'small', 'images/singleProduct/5dd17de4d5649976ba8e09777ab2ac56d3889633.jpg', 'blue', 'both'),
+                                                                          (1, 'Truman Set', 3, 'small', 'images/singleProduct/05684d5a04b33d1efd442aa67b6e3109c55add7d.jpg', 'blue', 'gel'),
+                                                                          (1, 'Truman Set', 3, 'small', 'images/singleProduct/3093dc6b7b6084b84d6233d5cf3040f88a48fadc.jpg', 'blue', 'cream'),
+                                                                          (1, 'Truman Set', 4, 'small', 'images/singleProduct/27f60831bc0cb0b8d8027797159a65d6d311e2f5.jpg', 'blue', 'both'),
+                                                                          (1, 'Truman Set', 5, 'small', 'images/singleProduct/6c3cd623c915805bfac40339c98422e9868ab450.jpg', 'blue', 'both'),
+                                                                          (1, 'Truman Set', 0, 'small', 'images/singleProduct/f0f6df5da2b7c454ddf6831c691bc8faed20e794..jpg', 'green', 'gel'),
+                                                                          (1, 'Truman Set', 0, 'small', 'images/singleProduct/bd2323ddac0bb1557c04b3b07361967b285404be.jpg', 'green', 'cream'),
+                                                                          (1, 'Truman Set', 1, 'small', 'images/singleProduct/636cdcfe1873a4dcde8a5b07216d6671f791cb9c.jpg', 'green', 'both'),
+                                                                          (1, 'Truman Set', 2, 'small', 'images/singleProduct/861b40c7343a850cd10d780e4938ca3841df4e8b.jpg', 'green', 'both'),
+                                                                          (1, 'Truman Set', 3, 'small', 'images/singleProduct/bc3f495f0fa8cb2b70f12cccd65658b28621f5b0.jpg', 'green', 'gel'),
+                                                                          (1, 'Truman Set', 3, 'small', 'images/singleProduct/13964831c52ffadfb3e8871147ae15883041f3e0.jpg', 'green', 'cream'),
+                                                                          (1, 'Truman Set', 4, 'small', 'images/singleProduct/2a3eab470be2f4725898f3c331c2a83d5dd92546.jpg', 'green', 'both'),
+                                                                          (1, 'Truman Set', 5, 'small', 'images/singleProduct/4e902f206472c2f023c7caa0eb21a127050f6b39.jpg', 'green', 'both')

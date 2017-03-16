@@ -76,4 +76,13 @@ angular.module("main").service("productsSvc", function($http) {
     });
     return result;
   }
+
+  this.getProductById = function(id) {
+    return $http({
+      method: "GET",
+      url: "/products/" + id
+    }).then(function(result) {
+      return result.data;
+    })
+  }
 })

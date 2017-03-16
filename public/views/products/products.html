@@ -7,9 +7,9 @@
     <div ng-repeat="product in sets">
       <a>
         <div class="item-image">
-          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="color == 'brown'">
-          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="color == 'blue'">
-          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="color == 'green'">
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'brown'"></a>
+          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'">
+          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'">
         </div>
         <div class="item-info">
           <span>${{product.price}}</span>
@@ -32,9 +32,9 @@
     <div ng-repeat="product in bladesAndPacks">
       <a>
         <div class="item-image">
-          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="color == 'brown'">
-          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="color == 'blue'">
-          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="color == 'green'">
+          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'brown'">
+          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'">
+          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'">
         </div>
         <div class="item-info">
           <span>${{product.price}}</span>
@@ -57,9 +57,9 @@
     <div ng-repeat="product in supplies">
       <a>
         <div class="item-image">
-          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="color == 'brown'">
-          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="color == 'blue'">
-          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="color == 'green'">
+          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'brown'">
+          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'">
+          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'">
         </div>
         <div class="item-info">
           <span>${{product.price}}</span>

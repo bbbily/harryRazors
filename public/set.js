@@ -9,3 +9,4 @@ require("./directives/startTrial/startTrial.js");
 require("./directives/colorCircle/colorCircle.js");
 require("./directives/colorCircle/colorCircle.css");
 require("./views/products/productsCtrl.js");
+require("./views/products/singleProduct.js");
