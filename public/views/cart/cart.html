@@ -1,0 +1,29 @@
+<div class="cart-container">
+  <section class="cart-header">
+    <h2>your cart</h2>
+    <a ui-sref="products">continue shopping</a>
+    <a ui-sref="shipping">checkout</a>
+  </section>
+
+  <section class="cart-main">
+    <div class="cart-title">
+      <ul>
+        <li>item</li>
+        <li>unit price</li>
+        <li>quantity</li>
+        <li>product total</li>
+      </ul>
+    </div>
+    <div class="cart-detail">
+      <div class="cart-product" ng-repeat="product in cart">
+        <ul>
+          <li><img ng-src="{{product.img_url}}" alt="img_url"></li>
+          <li>{{product.name}}</li>
+          <li>{{product.price}}</li>
+          <li>{{product.quantity}}</li>
+          <li>{{product.total}}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

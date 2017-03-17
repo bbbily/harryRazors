@@ -1,5 +1,13 @@
 angular.module("main").service("productsSvc", function($http) {
   var hasUser = false;
+  var cart = [];
+  var userId = null;
+  this.setUserId = function(id) {
+    userId = id;
+  }
+  this.getUserId = function(id) {
+    return userId;
+  }
   this.setHasUser = function(boolean) {
     hasUser = boolean;
   }
@@ -102,5 +110,22 @@ angular.module("main").service("productsSvc", function($http) {
     }).then(function(result) {
       return result.data;
     })
+  }
+
+  this.addToCart = function(data, quantity, imgUrl, packSize) {
+    var product = {};
+    product.id = data.id;
+    product.quantity = quantity;
+    product.name = data.name;
+    product.price = data.price;
+    product.showcolor = data.showcolor;
+    product.img_url = imgUrl;
+    product.pack_size = packSize;
+    product.total = data.price * quantity;
+    cart.push(product);
+  }
+
+  this.getCart = function() {
+    return cart;
   }
 })

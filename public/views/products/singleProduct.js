@@ -19,6 +19,16 @@ angular.module("main").controller("singleProductCtrl", function($scope, $statePa
       $scope.smallPics = result;
     })
   }
+
+  $scope.addToCart = function(quantity, packSize) {
+    for (var i=0; i<$scope.largePics.length; i++) {
+      if ($scope.largePics[i].index == 0 && $scope.largePics[i].showcolor == $scope.product.showcolor && $scope.largePics[i].gelorcream == $scope.product.gelorcream && $scope.largePics[i].pack_size == $scope.product.pack_size) {
+        var imgUrl = $scope.largePics[i].img_url;
+        break;
+      }
+    }
+    productsSvc.addToCart($scope.data, quantity, imgUrl, packSize);
+  }
   $scope.getProductById(id);
   $scope.getLargePics(id);
   $scope.getSmallPics(id);

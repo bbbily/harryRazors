@@ -10,6 +10,16 @@ angular.module("main", ["ui.router"])
         url: "/",
         templateUrl: "views/home/home.html"
       })
+      .state("cart", {
+        url: "/cart",
+        templateUrl: "views/cart/cart.html",
+        controller: "cartCtrl"
+      })
+      .state("shipping", {
+        url: "/shipping",
+        templateUrl: "views/shipping/shipping.html",
+        controller: "shippingCtrl"
+      })
       .state("products", {
         url: "/products",
         templateUrl: "views/products/products.html",
