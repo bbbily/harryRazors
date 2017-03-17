@@ -85,4 +85,22 @@ angular.module("main").service("productsSvc", function($http) {
       return result.data;
     })
   }
+
+  this.getLargePics = function(id) {
+    return $http({
+      method: "GET",
+      url: "/products/largePics/" + id
+    }).then(function(result) {
+      return result.data;
+    })
+  }
+
+  this.getSmallPics = function(id) {
+    return $http({
+      method: "GET",
+      url: "/products/smallPics/" + id
+    }).then(function(result) {
+      return result.data;
+    })
+  }
 })

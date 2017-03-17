@@ -1,20 +1,33 @@
 <div class="product-container">
   <section class="product-info">
     <div class="small-pics">
-      <div class="small-pic-container" ng-repeat="smallPic in smallPics">
-        <img src="{{smallPic.img_url}}" alt="smallPic">
+      <div class="small-pic-container" ng-repeat="smallPic in smallPics | filter: {showcolor : product.showcolor, gelorcream: product.gelorcream}">
+        <img ng-src="{{smallPic.img_url}}" alt="smallPic" ng-click="product.index = smallPic.index">
       </div>
     </div>
-    <div class="big-pic" ng-repeat="largePic in largePics">
-      <img src="{{largePic.img_url}}" alt="largePics">
+    <div class="big-pic" ng-repeat="largePic in largePics | filter: product">
+      <img ng-src="{{largePic.img_url}}" alt="largePics">
     </div>
-    <div class="info"></div>
+    <div class="info">
+      <h3>{{data.name}}</h3>
+      <h3>${{data.price}}</h3>
+      <ul>
+        <li><p>Free U.S. Shipping for orders over $10</p></li>
+        <li><p>Available in U.S.</p></li>
+      </ul>
+      <gel-or-cream-dir></gel-or-cream-dir>
+      <div class="color-selector">
+        <div class="color-text">
+          <p>color</p>
+          <p></p>
+        </div>
+        <color-circle-dir></color-circle-dir>
+      </div>
+      <quantity-dir></quantity-dir>
+      <add-to-cart-dir></add-to-cart-dir>
+    </div>
   </section>
   <section class="product-feature">
 
   </section>
 </div>
-dfljslfjasdlk;fjsadlfjsaklfjasdkl
-
-{{data.id}}
-{{data.name}}
