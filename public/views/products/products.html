@@ -8,8 +8,8 @@
       <a>
         <div class="item-image">
           <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'"></a>
-          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'">
-          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'">
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'"></a>
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'"></a>
         </div>
         <div class="item-info">
           <span>${{product.price}}</span>
@@ -32,9 +32,9 @@
     <div ng-repeat="product in bladesAndPacks">
       <a>
         <div class="item-image">
-          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'">
-          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'">
-          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'">
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'"></a>
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'"></a>
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'"></a>
         </div>
         <div class="item-info">
           <span>${{product.price}}</span>
@@ -57,9 +57,9 @@
     <div ng-repeat="product in supplies">
       <a>
         <div class="item-image">
-          <img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'">
-          <img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'">
-          <img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'">
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'"></a>
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'"></a>
+          <a  ui-sref="product({id: product.id})"><img ng-src="{{product.green_img}}" alt="item-image" ng-if="product.showcolor == 'green'"></a>
         </div>
         <div class="item-info">
           <span>${{product.price}}</span>

@@ -27,5 +27,6 @@ angular.module("main").controller("singleProductCtrl", function($scope, $statePa
   $scope.product.index = 0;
   $scope.product.showcolor = "default";
   $scope.product.gelorcream = "gel";
+  $scope.product.pack_size = 8;
 
 })

@@ -207,3 +207,133 @@ values (1, 'Truman Set', 1, 'large', 'images/singleProduct/f03e18a13a0cd1d9cbaa8
         'green', 'gel'),
         (1, 'Truman Set', 5, 'large', 'images/singleProduct/eb923ac29b5eda490bf19d35859c7bf6649f8ffa.jpg',
         'green', 'gel')
+
+        insert into singleproductpics
+        (product_id, name, size, showcolor, gelorcream, index, img_url)
+        values(3, 'Winston Sets', 'large', 'default', 'gel', 0, 'images/singleProduct/1c6983b4b4128be00f6ed1734845cfb9501244b4.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'gel', 1, 'images/singleProduct/38856d9cd9f9526e32b9171ad9a2cb53e0e742f7.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'gel', 2, 'images/singleProduct/31ec0c057ded9673f144cfcb197eb1ecc23ea984.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'gel', 3, 'images/singleProduct/9c4529513fe5539708746b625d924818a5d58212.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'gel', 4, 'images/singleProduct/4fd96b3053a5e127dd86a1965e814aced7f0d43b.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'gel', 5, 'images/singleProduct/b1477e65cf6e719ba34dd603e4eb5ab456db0582.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'cream', 0, 'images/singleProduct/4b0e791434751773fee705fb12ffd293569a10bc.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'cream', 1, 'images/singleProduct/38856d9cd9f9526e32b9171ad9a2cb53e0e742f7.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'cream', 2, 'images/singleProduct/31ec0c057ded9673f144cfcb197eb1ecc23ea984.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'cream', 3, 'images/singleProduct/9113e6a12a8ee04075ca5f7ef0a39994cba1b196.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'cream', 4, 'images/singleProduct/4fd96b3053a5e127dd86a1965e814aced7f0d43b.jpg'),
+        (3, 'Winston Sets', 'large', 'default', 'cream', 5, 'images/singleProduct/b1477e65cf6e719ba34dd603e4eb5ab456db0582.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'gel', 0, 'images/singleProduct/33fe7981d5afb60de1d045a2c5753835c84816a4.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'gel', 1, 'images/singleProduct/99defeb1efa16c7a99a6fd9916a53da06103cb52.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'gel', 2, 'images/singleProduct/421bd9ca14c99d1a8b53d0dca5b365475651d737.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'gel', 3, 'images/singleProduct/6974b64aa2a9a9d43b34043078d49393e7715e4c.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'gel', 4, 'images/singleProduct/c490bcf57784196a9f97635fd9aeb9080a4d778d.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'gel', 5, 'images/singleProduct/b60a6bf2795b3398abc8bd571cc8bd67d11259cc.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'cream', 0, 'images/singleProduct/55e593cb6cffa543a7bb5fdf22e0f8bb30f2e04a.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'cream', 1, 'images/singleProduct/99defeb1efa16c7a99a6fd9916a53da06103cb52.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'cream', 2, 'images/singleProduct/421bd9ca14c99d1a8b53d0dca5b365475651d737.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'cream', 3, 'images/singleProduct/cc69ad2d3ccf5faac8969a9b31a8c868c5bc63d9.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'cream', 4, 'images/singleProduct/c490bcf57784196a9f97635fd9aeb9080a4d778d.jpg'),
+        (3, 'Winston Sets', 'small', 'default', 'cream', 5, 'images/singleProduct/b60a6bf2795b3398abc8bd571cc8bd67d11259cc.jpg')
+
+        insert into singleproductpics
+        (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
+        values(4, 'Harry''s Blades', 'large', 'default', 'gel', 4, 0, 'images/singleProduct/edffa1d140a9b8d2da243898d62de0300bdc0b4b.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 4, 1, 'images/singleProduct/b1382f1f4061de6167bbbfd9c5221d87082f9295.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 4, 2, 'images/singleProduct/2e32c53464fc90ba5cb07e3a349b5a1393a8eed5.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/78294910ca2ea4b132980519e2e47b0b57d7aca8.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/b1382f1f4061de6167bbbfd9c5221d87082f9295.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 8, 2, 'images/singleProduct/2e32c53464fc90ba5cb07e3a349b5a1393a8eed5.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 16, 0, 'images/singleProduct/b01e0559a15e03d064ff71647acc1c65dddb1fcd.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 16, 1, 'images/singleProduct/b1382f1f4061de6167bbbfd9c5221d87082f9295.jpg'),
+        (4, 'Harry''s Blades', 'large', 'default', 'gel', 16, 2, 'images/singleProduct/2e32c53464fc90ba5cb07e3a349b5a1393a8eed5.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 4, 0, 'images/singleProduct/d3de1a9c3ed57f3ac285f3238599c7b5fac176c0.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 4, 1, 'images/singleProduct/df01b174a4f07e009fff1396e0dc476241ec5359.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 4, 2, 'images/singleProduct/cee63fdaf8e82707d17a6595e08e517d4d8358bf.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/d28f04d3f6043c0f15c73b7873d94295935cce12.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/df01b174a4f07e009fff1396e0dc476241ec5359.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 8, 2, 'images/singleProduct/cee63fdaf8e82707d17a6595e08e517d4d8358bf.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 16, 0, 'images/singleProduct/04b4e422a7626043371144de0f77247f4fc818c4.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 16, 1, 'images/singleProduct/df01b174a4f07e009fff1396e0dc476241ec5359.jpg'),
+        (4, 'Harry''s Blades', 'small', 'default', 'gel', 16, 2, 'images/singleProduct/cee63fdaf8e82707d17a6595e08e517d4d8358bf.jpg')
+insert into singleproductpics
+        (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
+        values(5, 'Blades & Shave Gel', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/530bc14614d817a8b14f48c7aa888332f680524d.jpg'),
+        (6, 'Blades, Shave Gel & Post Shave Balm', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/6ed90f3e41ee0ab47bd0f12bd7a5a45e5a5d78ee.jpg')
+        insert into singleproductpics
+                (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
+                values(7, 'The Winston', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/2053c31b0c4c5ce0d851cc495bf3819be395cc7b.jpg'),
+                (7, 'The Winston', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/d9369addfb5bafdf155bc578ec3bf3a081a048f6.jpg'),
+                (7, 'The Winston', 'large', 'default', 'gel', 8, 2, 'images/singleProduct/13eebef5c4719e8c9e2db814d9d6f9fa0be4332b.jpg'),
+                (7, 'The Winston', 'large', 'default', 'gel', 8, 3, 'images/singleProduct/a69c552522e6c210021579134f87269b44338c90.jpg'),
+                (7, 'The Winston', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/49a559bdf55972956ab48487d9c65c16c46147f5.jpg'),
+                (7, 'The Winston', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/39c92a84d336885d3981d5c62be3334fbf70b484.jpg'),
+                (7, 'The Winston', 'small', 'default', 'gel', 8, 2, 'images/singleProduct/9028c3fddfa5e903ad9866c011e3b6562da7c7a6.jpg'),
+                (7, 'The Winston', 'small', 'default', 'gel', 8, 3, 'images/singleProduct/c6f11ff08af75873757136144c515fdd8d547b55.jpg'),
+                (8, 'Foaming Shave Gel', 'small', 'default', 'gel', 4, 0, 'images/singleProduct/51630d07f48ddab136e1009e5676ed763a4a3537.jpg'),
+                (8, 'Foaming Shave Gel', 'small', 'default', 'gel', 4, 1, 'images/singleProduct/9097e82cc819bc1649765b6fe5a35c9785d91ac1.jpg'),
+                (8, 'Foaming Shave Gel', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/4dda4a833fa2ed3ba8bf76b174711c5b6e00c665.jpg'),
+                (8, 'Foaming Shave Gel', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/8157d88d5b0f5d110dee7d9ebe382565c91db695.jpg'),
+                (8, 'Foaming Shave Gel', 'small', 'default', 'gel', 16, 0, 'images/singleProduct/2cb4d75081def43876e444d6963d5d6f58fd0799.jpg'),
+                (8, 'Foaming Shave Gel', 'small', 'default', 'gel', 16, 0, 'images/singleProduct/db7f910ee3e973e2c64dca16bdb899b6cd5cce31.jpg'),
+                (8, 'Foaming Shave Gel', 'large', 'default', 'gel', 4, 0, 'images/singleProduct/5cb52fe84e2fd863c9018b4be9bb20cb61c66b32.jpg'),
+                (8, 'Foaming Shave Gel', 'large', 'default', 'gel', 4, 1, 'images/singleProduct/299b3703afbaf3b51e0a9d3fd82ae76348eda7b0.jpg'),
+                (8, 'Foaming Shave Gel', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/825c7aff510b523e0a41fb18c84a2448eec20bc9.jpg'),
+                (8, 'Foaming Shave Gel', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/d702c5d713c8e566678b07e039433f6e41a69944.jpg'),
+                (8, 'Foaming Shave Gel', 'large', 'default', 'gel', 16, 0, 'images/singleProduct/cb52098baea18d87c03282068cea9cc18f70c45e.jpg'),
+                (8, 'Foaming Shave Gel', 'large', 'default', 'gel', 16, 1, 'images/singleProduct/95e774a6a45fb4980cc5f7aaab05df53679395cb.jpg')
+
+insert into singleproductpics
+        (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
+        values(9, 'Shave Cream', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/627b0a2e4283034db763af8e95bf7203d07e853a.jpg'),
+        (9, 'Shave Cream', 'large', 'default', 'gel', 16, 1, 'images/singleProduct/04862389effd2f4223d33309bfbf597c4d6d2849.jpg'),
+        (10, 'Post Shave Balm', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/6d862f8ed585bf9d5bb51d874a10dcee0f4fd923.jpg'),
+        (10, 'Post Shave Balm', 'large', 'default', 'gel', 4, 1, 'images/singleProduct/21a935bf50a7afc7e2d83ce1ab13fc8205221aff.jpg'),
+        (11, 'Daily Face Wash', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/cc67f87c9dd51a81c02cfa08f858cb2985b3e98c.jpg'),
+        (12, 'Daily Face Lotion SPF 15', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/2b0a26fcee727e96f25738151fdc5cad260117f6.jpg'),
+        (12, 'Daily Face Lotion SPF 15', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/e124d65b2f7b54d92f3e90f3f16e642e1a434e69.jpg'),
+        (12, 'Daily Face Lotion SPF 15', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/ab923a388df9d227f5714134520a7cf66d15f3e8.jpg'),
+        (12, 'Daily Face Lotion SPF 15', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/3b8fd9b8cb08c5d0a16c070770a1f22cc4fcd7dd.jpg')
+
+insert into singleproductpics
+        (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
+        values(13, 'Lip Balm SPF 15', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/8df2ec06eb26d9c4dfa200538a67228cd21f2573.jpg'),
+        (13, 'Lip Balm SPF 15', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/0b5d6e0f801ab8b5fa3373804e9099b1d9c27a39.jpg'),
+        (13, 'Lip Balm SPF 15', 'large', 'default', 'gel', 8, 2, 'images/singleProduct/4a1f89c781ffefa12f266b234610cc3032726b37.jpg'),
+        (13, 'Lip Balm SPF 15', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/06f9738ceaea8ae59a76c8c02b1cbf37d61a6480.jpg'),
+        (13, 'Lip Balm SPF 15', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/c3012dee8842e2a695584e1c1f52d63ccd0b11cc.jpg'),
+        (13, 'Lip Balm SPF 15', 'small', 'default', 'gel', 8, 2, 'images/singleProduct/022e6bbeef6349ec91d0503f1bba14fa920202ca.jpg'),
+        (14, 'Harry''s Travel Kit', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/0448bbcfd0c1c2925ecd6816aca17a22847175dd.jpg'),
+        (14, 'Harry''s Travel Kit', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/7c2a60dba3d6eeb6607445a5174b3bfe3fcc63b7.jpg'),
+        (14, 'Harry''s Travel Kit', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/3a3b2555bc09b0405921af05e72756e21ae09dcd.jpg'),
+        (14, 'Harry''s Travel Kit', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/dcf763af0f5d4335668fc9bb3f52e07fdc05b7f4.jpg'),
+
+        insert into singleproductpics
+              (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
+              values(16, 'Harry''s Razor Stand', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/32bcb53be660a2c21f192743ea181fb6c2eede30.jpg'),
+           (16, 'Harry''s Razor Stand', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/33eb8b261e7fd266e19a218f1e1d18894a66bc74.jpg'),
+           (16, 'Harry''s Razor Stand', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/9e30024a0f578346ec4793d628a34201f208bbef.jpg'),
+           (16, 'Harry''s Razor Stand', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/ee788091c91f6416ed6ccb409576b75013e38ee2.jpg'),
+           (17, 'The Truman', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/b522425deb6ba642e1a67f06fc3ef8147f475fb1.jpg'),
+           (17, 'The Truman', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/ac078c7378e9f279a01104c8cbf27edb9b93488b.jpg'),
+           (17, 'The Truman', 'large', 'default', 'gel', 8, 2, 'images/singleProduct/da36c68931e70fdad3254d3c63fcf5d135f221d9.jpg'),
+           (17, 'The Truman', 'large', 'default', 'gel', 8, 3, 'images/singleProduct/cd650a945754e5de369faf0d523968d1b216cb96.jpg'),
+           (17, 'The Truman', 'large', 'blue', 'gel', 8, 0, 'images/singleProduct/615549dd39b1b059231820c58e71536a51515cca.jpg'),
+           (17, 'The Truman', 'large', 'blue', 'gel', 8, 1, 'images/singleProduct/3e7a2b280c5282ac4e4dc2cb51855b1bfc4d4a23.jpg'),
+           (17, 'The Truman', 'large', 'blue', 'gel', 8, 2, 'images/singleProduct/e5da9f433af82b8ee0841d030a198481122ebc19.jpg'),
+           (17, 'The Truman', 'large', 'blue', 'gel', 8, 3, 'images/singleProduct/78bbe036b1cf9c0849b3e67b0232b201c53c64a5.jpg'),
+           (17, 'The Truman', 'large', 'green', 'gel', 8, 0, 'images/singleProduct/8926a47c1b8b46e13d817db270e29f61267f3cc9.jpg'),
+           (17, 'The Truman', 'large', 'green', 'gel', 8, 1, 'images/singleProduct/ba87265ea6a8098b604fd5713eaff94edea27027.jpg'),
+           (17, 'The Truman', 'large', 'green', 'gel', 8, 2, 'images/singleProduct/196722c9a5fc79a3b2f1524a24ea70002144ea68.jpg'),
+           (17, 'The Truman', 'large', 'green', 'gel', 8, 3, 'images/singleProduct/e345222674b0b43d083ec73d11d5669fe07f1516.jpg'),
+           (17, 'The Truman', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/89b9b47eb6dadf3a0ecf3111d272266079748aa4.jpg'),
+           (17, 'The Truman', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/75fd065205d77a5e32245a2d5c38007983334e79.jpg'),
+           (17, 'The Truman', 'small', 'default', 'gel', 8, 2, 'images/singleProduct/c2a8bc3edc74b740199bd662ec90b62c993baa09.jpg'),
+           (17, 'The Truman', 'small', 'default', 'gel', 8, 3, 'images/singleProduct/94f3fcb12ac6d418d9ff549f8aba71012d63f718.jpg'),
+           (17, 'The Truman', 'small', 'blue', 'gel', 8, 0, 'images/singleProduct/c50f0c2fb7d848deb8bc19a413c343b68ed32767.jpg'),
+           (17, 'The Truman', 'small', 'blue', 'gel', 8, 1, 'images/singleProduct/45d9ad78d18852008f84fcf4a848a8bc3fd7e385.jpg'),
+           (17, 'The Truman', 'small', 'blue', 'gel', 8, 2, 'images/singleProduct/cbd1ecb63f9005fe49c803a4fe655e4f81ac9eb8.jpg'),
+           (17, 'The Truman', 'small', 'blue', 'gel', 8, 3, 'images/singleProduct/ad05399b6d5429736c2afd6d440d4e6507711b51.jpg'),
+           (17, 'The Truman', 'small', 'green', 'gel', 8, 0, 'images/singleProduct/848d2a8a0c24453ec1ab34f4ad78e4dd97a3c1cf.jpg'),
+           (17, 'The Truman', 'small', 'green', 'gel', 8, 1, 'images/singleProduct/def4127ff81ed1b27fce1788e73de855d1506d55.jpg'),
+           (17, 'The Truman', 'small', 'green', 'gel', 8, 2, 'images/singleProduct/208828c9fd078188a8f7fc8ee615d53b249876df.jpg'),
+           (17, 'The Truman', 'small', 'green', 'gel', 8, 3, 'images/singleProduct/b8cc94f89bbba39ee6a09998880856f58116046e.jpg')

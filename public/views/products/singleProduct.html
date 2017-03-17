@@ -1,7 +1,7 @@
 <div class="product-container">
   <section class="product-info">
     <div class="small-pics">
-      <div class="small-pic-container" ng-repeat="smallPic in smallPics | filter: {showcolor : product.showcolor, gelorcream: product.gelorcream}">
+      <div class="small-pic-container" ng-repeat="smallPic in smallPics | filter: {showcolor : product.showcolor, gelorcream: product.gelorcream, pack_size: product.pack_size}">
         <img ng-src="{{smallPic.img_url}}" alt="smallPic" ng-click="product.index = smallPic.index">
       </div>
     </div>
@@ -23,6 +23,7 @@
         </div>
         <color-circle-dir></color-circle-dir>
       </div>
+      <size-dir></size-dir>
       <quantity-dir></quantity-dir>
       <add-to-cart-dir></add-to-cart-dir>
     </div>

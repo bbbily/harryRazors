@@ -6,6 +6,7 @@ require("./directives/nav/nav.js");
 require("./directives/quantity/quantity.js");
 require("./directives/addToCart/addToCart.js");
 require("./directives/gelOrCream/gelOrCream.js");
+require("./directives/size/size.js");
 require("../reset.css");
 require("./directives/nav/nav.scss");
 require("./directives/startTrial/startTrial.js");
