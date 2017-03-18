@@ -2,7 +2,7 @@
   <section class="cart-header">
     <h2>your cart</h2>
     <a ui-sref="products">continue shopping</a>
-    <a ui-sref="shipping">checkout</a>
+    <a ng-click="checkSignIn()">checkout</a>
   </section>
 
   <section class="cart-main">
@@ -20,10 +20,15 @@
           <li><img ng-src="{{product.img_url}}" alt="img_url"></li>
           <li>{{product.name}}</li>
           <li>{{product.price}}</li>
-          <li>{{product.quantity}}</li>
+          <li>
+            <quantity-dir quantity="product.quantity" add-quantity="addQuantity(product.img_url)" minus-quantity="minusQuantity(product.img_url, product.quantity)"></quantity-dir>
+            <a ng-click="removeQuantity(product.img_url)">X</a>
+          </li>
           <li>{{product.total}}</li>
         </ul>
       </div>
+      <p>subtotal {{subtotal}}</p>
+      <a ng-click="checkSignIn()">checkout</a>
     </div>
   </section>
 </div>

@@ -32,5 +32,13 @@ module.exports = {
       if (err) console.log(err)
       else res.status(200).send(product);
     })
+  },
+
+  getFeatures: function(req, res) {
+    var id = req.params.id;
+    db.read_features([id], function(err, features) {
+      if (err) console.log(err)
+      else res.status(200).send(features);
+    })
   }
 }

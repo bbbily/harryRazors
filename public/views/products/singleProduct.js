@@ -20,6 +20,12 @@ angular.module("main").controller("singleProductCtrl", function($scope, $statePa
     })
   }
 
+  $scope.getFeatures = function(id) {
+    productsSvc.getFeatures(id).then(function(result) {
+      $scope.features = result;
+    })
+  }
+
   $scope.addToCart = function(quantity, packSize) {
     for (var i=0; i<$scope.largePics.length; i++) {
       if ($scope.largePics[i].index == 0 && $scope.largePics[i].showcolor == $scope.product.showcolor && $scope.largePics[i].gelorcream == $scope.product.gelorcream && $scope.largePics[i].pack_size == $scope.product.pack_size) {
@@ -29,10 +35,21 @@ angular.module("main").controller("singleProductCtrl", function($scope, $statePa
     }
     productsSvc.addToCart($scope.data, quantity, imgUrl, packSize);
   }
+
+  $scope.addQuantity = function() {
+    $scope.quantity++;
+  }
+  $scope.minusQuantity = function() {
+    if ($scope.quantity > 1)
+      $scope.quantity--;
+  }
+
   $scope.getProductById(id);
   $scope.getLargePics(id);
   $scope.getSmallPics(id);
+  $scope.getFeatures(id);
 
+  $scope.quantity = 1;
   $scope.product = {};
   $scope.product.index = 0;
   $scope.product.showcolor = "default";

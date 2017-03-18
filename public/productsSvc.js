@@ -5,7 +5,7 @@ angular.module("main").service("productsSvc", function($http) {
   this.setUserId = function(id) {
     userId = id;
   }
-  this.getUserId = function(id) {
+  this.getUserId = function() {
     return userId;
   }
   this.setHasUser = function(boolean) {
@@ -112,6 +112,18 @@ angular.module("main").service("productsSvc", function($http) {
     })
   }
 
+  this.getFeatures = function(id) {
+    return $http({
+      method: "GET",
+      url: "/products/features/" + id
+    }).then(function(result) {
+      return result.data;
+    })
+  }
+
+
+  ////////////////////////////cart function .////////////////////////
+
   this.addToCart = function(data, quantity, imgUrl, packSize) {
     var product = {};
     product.id = data.id;
@@ -127,5 +139,32 @@ angular.module("main").service("productsSvc", function($http) {
 
   this.getCart = function() {
     return cart;
+  }
+
+  this.addQuantity = function(imgUrl) {
+    for (var i=0; i<cart.length; i++) {
+      if (cart[i].img_url == imgUrl) {
+        cart[i].quantity++;
+        cart[i].total = cart[i].price * cart[i].quantity;
+        break;
+      }
+    }
+  }
+  this.minusQuantity = function(imgUrl) {
+    for (var i=0; i<cart.length; i++) {
+      if (cart[i].img_url == imgUrl) {
+        cart[i].quantity--;
+        cart[i].total = cart[i].price * cart[i].quantity;
+        break;
+      }
+    }
+  }
+  this.removeQuantity = function(imgUrl) {
+    for (var i=0; i<cart.length; i++) {
+      if (cart[i].img_url == imgUrl) {
+        cart.splice(i, 1);
+        break;
+      }
+    }
   }
 })

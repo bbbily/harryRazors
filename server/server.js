@@ -42,6 +42,7 @@ app.get("/products", productsCtrl.getAll);
 app.get("/products/:id", productsCtrl.getOne);
 app.get("/products/largePics/:id", productsCtrl.getLargePics);
 app.get("/products/smallPics/:id", productsCtrl.getSmallPics);
+app.get("/products/features/:id", productsCtrl.getFeatures);
 
 app.get("/me", usersCtrl.isAuthed, usersCtrl.me);
 app.get("/logout", usersCtrl.logout);
