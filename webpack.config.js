@@ -15,14 +15,14 @@ module.exports = {
         loader: "style-loader!css-loader"
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|jpg|svg)$/i,
         loaders: [
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
       {
-        test: /\.(ttf|eot|woff|woff2|svg)$/,
+        test: /\.(ttf|eot|woff|woff2|jpg|svg)$/,
         loader: "url-loader?limit=50000&name=fonts/[hash].[ext]"
       }
     ]

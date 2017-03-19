@@ -1,7 +1,11 @@
+.circles {
+  padding-bottom: 15px;
+}
 .circles ul {
   display: flex;
   list-style-type: none;
-
+  justify-content: center;
+  padding: 5px 0;
 }
 
 .circles ul li {
@@ -11,6 +15,7 @@
   text-align: center;
   border: 1px solid white;
 }
+
 .circles ul li:hover {
   border: 1px solid gray;
 }

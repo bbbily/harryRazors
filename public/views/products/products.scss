@@ -1,0 +1,43 @@
+.products-container {
+  text-align: center;
+}
+
+.products-container > section {
+  border-top: 1px solid #868686;
+  padding-bottom: 60px;
+}
+  .products-text {
+    padding: 60px 0;
+
+    h5 {
+      font-size: 120%;
+      color: #185674;
+      font-weight: 900;
+    }
+
+    p {
+      padding: 20px 0;
+      color: #868686;
+    }
+  }
+
+.products-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .sets {
+    width: 33.33%;
+    padding-bottom: 60px;
+  }
+}
+
+.item-image > a > img {
+  width: 90%;
+  height: 90%;
+}
+
+.item-info {
+  padding: 15px 0;
+  color: #868686;
+  letter-spacing: 0;
+}

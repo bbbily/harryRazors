@@ -1,11 +1,11 @@
+<div class="products-container">
 <section class="starter">
   <div class="products-text">
     <h5>Starter Sets</h5>
     <p>All you need to get shaving with Harry’s – in one tidy box.</p>
   </div>
   <div class="starter-info products-info">
-    <div ng-repeat="product in sets">
-      <a>
+    <div ng-repeat="product in sets" class="sets">
         <div class="item-image">
           <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'"></a>
           <a  ui-sref="product({id: product.id})"><img ng-src="{{product.blue_img}}" alt="item-image" ng-if="product.showcolor == 'blue'"></a>
@@ -18,7 +18,6 @@
         </div>
         <color-circle-dir ng-show="product.color"></color-circle-dir>
         <span ng-show="product.tag_text">{{product.tag_text}}</span>
-      </a>
     </div>
   </div>
 </section>
@@ -29,7 +28,7 @@
     <p>Get more shaving essentials.</p>
   </div>
   <div class="products-info">
-    <div ng-repeat="product in bladesAndPacks">
+    <div ng-repeat="product in bladesAndPacks" class="sets">
       <a>
         <div class="item-image">
           <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'"></a>
@@ -54,7 +53,7 @@
     <p>Products designed to help you make your morning easier.</p>
   </div>
   <div class="products-info">
-    <div ng-repeat="product in supplies">
+    <div ng-repeat="product in supplies" class="sets">
       <a>
         <div class="item-image">
           <a  ui-sref="product({id: product.id})"><img ng-src="{{product.default_img}}" alt="item-image" ng-if="product.showcolor == 'default'"></a>
@@ -72,3 +71,4 @@
     </div>
   </div>
 </section>
+</div>

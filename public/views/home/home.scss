@@ -1,0 +1,132 @@
+body {
+  letter-spacing: 0.1em;
+  font-family: 'Muli', sans-serif;
+}
+
+.hero > a {
+  .hero-text {
+    background: url("https://s3.amazonaws.com/harrypics/products/products/76a6e4ceb85737a9a1e79b6b4d31ec0c3fa7a1d5.jpg") no-repeat center center;
+    color: white;
+    width: 50%;
+    padding: 170px 0 170px 50%;
+    text-align: center;
+
+    h3 {
+      font-size: 200%;
+      line-height: 1.5em;
+    }
+    p {
+      font-size: 100%;
+      text-transform: uppercase;
+      padding: 20px 0;
+    }
+  }
+}
+
+.featured-products {
+  padding: 20px 0;
+  text-align: center;
+
+  .featured-text {
+    padding: 50px 0;
+    h4 {
+      font-size: 150%;
+      color: #185674;
+      line-height: 3em;
+    }
+    p {
+      color: #868686;
+    }
+  }
+}
+
+.feature-info {
+  display: flex;
+}
+.tile {
+  width: 33.33%;
+}
+.item-image > img {
+  height: 90%;
+  width: 90%;
+}
+
+.second-hero {
+  display: flex;
+  // padding: 20px 0;
+  justify-content: center;
+  overflow: hidden;
+}
+// .second-hero a {
+//   width: 594px;
+//   height: 460px;
+//   display: block;
+// }
+.text1 {
+  background: url("https://s3.amazonaws.com/harrypics/products/products/7e342edf020297cb1a15d3b4823a9ac83d25b1a3.jpg") no-repeat;
+}
+.text2 {
+  background: url("https://s3.amazonaws.com/harrypics/products/products/08bdd2e97f4b4cf081fa8a41be1cec9dfdcf3b7e.jpg") no-repeat;
+  color: white;
+  cursor: pointer;
+}
+.second-hero-text {
+  padding: 150px 250px 150px 50px;
+  width: 280px;
+  height: 160px;
+  text-align: center;
+
+  h4 {
+    font-size: 120%;
+    line-height: 2em;
+  }
+  p {
+    line-height: 1.5em;
+    padding: 10px 0;
+  }
+}
+
+.more-from-harry {
+  text-align: center;
+  background: #F7F7F7;
+  padding: 50px 0;
+}
+.more-text {
+  text-transform: uppercase;
+
+  h2 {
+    font-size: 180%;
+    color: #0A4D6D;
+    font-weight: 900;
+  }
+
+  p {
+    color: #0A4D6D;
+    padding: 20px 0;
+  }
+}
+
+.more-info {
+  display: flex;
+
+  a div {
+    padding-top: 30px;
+  }
+  a div img {
+    width: 85%;
+    height: 85%;
+  }
+
+  a div h5 {
+    text-transform: uppercase;
+    font-size: 100%;
+    color: #0A4D6D;
+  }
+
+  a div p {
+    font-size: 90%;
+    color: #929292;
+    padding: 20px 0;
+    letter-spacing: 0;
+  }
+}
