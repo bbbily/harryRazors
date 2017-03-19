@@ -1,16 +1,16 @@
 <div class="gel-or-cream">
   <ul>
-    <li ng-show="showGel" ng-click="product.gelorcream = 'gel'">
-      <span>foaming gel</span><span class="gel-on-focus"></span>
+    <li ng-show="product.gelorcream == 'gel'" ng-click="product.gelorcream = 'gel'">
+      <span class="gel-or-cream-text">foaming gel</span><span class="gel-on-focus"></span>
     </li>
-    <li ng-hide="showGel" ng-click="product.gelorcream = 'gel'">
-      <span>foaming gel</span><span class="gel-on-blur"></span>
+    <li ng-show="product.gelorcream == 'cream'" ng-click="product.gelorcream = 'gel'">
+      <span class="gel-or-cream-text">foaming gel</span><span class="gel-on-blur"></span>
     </li>
-    <li ng-hide="showGel" ng-click="product.gelorcream = 'cream'">
-      <span>shave cream</span><span class="cream-on-focus"></span>
+    <li ng-show="product.gelorcream == 'cream'" ng-click="product.gelorcream = 'cream'">
+      <span class="gel-or-cream-text">shave cream</span><span class="cream-on-focus"></span>
     </li>
-    <li ng-show="showGel" ng-click="product.gelorcream = 'cream'">
-      <span>shave cream</span><span class="cream-on-blur"></span>
+    <li ng-show="product.gelorcream == 'gel'" ng-click="product.gelorcream = 'cream'">
+      <span class="gel-or-cream-text">shave cream</span><span class="cream-on-blur"></span>
     </li>
   </ul>
 </div>

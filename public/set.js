@@ -5,6 +5,7 @@ require("./views/products/singleProduct.scss");
 require("./directives/nav/nav.scss");
 require("./directives/footer/footer.scss");
 require("./directives/colorCircle/colorCircle.css");
+require("./directives/gelOrCream/gelOrCream.scss");
 require("./main.js");
 require("./productsSvc.js");
 require("./views/signIn/signIn.js");

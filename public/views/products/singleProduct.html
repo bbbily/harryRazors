@@ -5,7 +5,7 @@
         <img ng-src="{{smallPic.img_url}}" alt="smallPic" ng-click="product.index = smallPic.index">
       </div>
     </div>
-    <div class="big-pic" ng-repeat="largePic in largePics | filter: product">
+    <div class="big-pics" ng-repeat="largePic in largePics | filter: product">
       <img ng-src="{{largePic.img_url}}" alt="largePics">
     </div>
     <div class="info">

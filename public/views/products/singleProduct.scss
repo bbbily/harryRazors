@@ -1,0 +1,45 @@
+.product-info {
+  background: #F7F7F7;
+  display: flex;
+
+  .small-pics {
+    flex: 1;
+    margin: 30px 0 0 30px;
+
+    img {
+      height: 44px;
+      width: 44px;
+      border: 1px solid #BFBFBF;
+    }
+  }
+
+  .big-pics {
+    flex: 5;
+  }
+
+  .info {
+    width: 300px;
+    margin: auto;
+    padding-right: 50px;
+    h3 {
+      padding: 10px 0;
+      font-size: 150%;
+      color: #185674;
+    }
+    p {
+      padding: 10px 0;
+      font-size: 90%;
+      color: #929292;
+      letter-spacing: 0;
+    }
+  }
+}
+.info > ul {
+  margin-left: 20px;
+  padding: 10px 0;
+
+}
+
+.color-selector {
+  display: flex;
+}

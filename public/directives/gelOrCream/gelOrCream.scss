@@ -1,0 +1,35 @@
+.gel-or-cream {
+  padding: 10px 0;
+  border-top: 1px solid #929292;
+}
+
+.gel-or-cream > ul > li {
+  padding: 10px 0;
+  list-style-type: none;
+  cursor: pointer;
+  color: #929292;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+
+.gel-on-blur, .cream-on-blur {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #929292;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: -6px;
+}
+
+.gel-on-focus, .cream-on-focus {
+  background: url("https://s3.amazonaws.com/harrypics/products/products/pdp_sprite%401x-5dd3b48b6d8f0629ae6aae4fb44300438c3ff6761a70cd8978c47b678a2f68c7.png") -72px -52px;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  margin-bottom: -6px;
+}
+
+.gel-or-cream-text {
+  width: 270px;
+  display: inline-block;
+}
