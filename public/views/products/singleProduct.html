@@ -15,16 +15,21 @@
         <li><p>Free U.S. Shipping for orders over $10</p></li>
         <li><p>Available in U.S.</p></li>
       </ul>
-      <gel-or-cream-dir></gel-or-cream-dir>
-      <div class="color-selector">
+      <gel-or-cream-dir  ng-show="data.gelorcream"></gel-or-cream-dir>
+      <div class="color-selector" ng-show="data.color">
         <div class="color-text">
-          <p>color</p>
-          <p></p>
+          <span>color</span>
         </div>
         <color-circle-dir></color-circle-dir>
       </div>
-      <size-dir></size-dir>
-      <quantity-dir quantity="quantity" add-quantity="addQuantity()" minus-quantity="minusQuantity()"></quantity-dir>
+      <div class="size-selector" ng-show="data.packsize">
+        <span>PACK SIZE</span>
+        <size-dir></size-dir>
+      </div>
+      <div class="quantity-selector" ng-show="data.quantity">
+        <span>quantity</span>
+        <quantity-dir quantity="quantity" add-quantity="addQuantity()" minus-quantity="minusQuantity()"></quantity-dir>
+      </div>
       <add-to-cart-dir></add-to-cart-dir>
     </div>
   </section>
@@ -33,20 +38,22 @@
       <div class="feature-img">
         <img ng-src="{{feature.img_url}}" alt="img_url">
       </div>
-      <div class="feature-text">
+      <div class="feature-text" ng-class="{'feature-text-left': feature.index % 2 == 0, 'feature-text-right': feature.index % 2 == 1}">
         <h3>{{feature.title}}</h3>
         <p>{{feature.text}}</p>
       </div>
     </div>
   </section>
+
   <section class="product-details">
-    <div class="product-desc">
-      <p>description</p>
+    <div class="product-description">
+      <h6>description</h6>
       <p>{{data.description}}</p>
     </div>
     <div class="product-shipping">
-      <p>shipping</p>
-      <p>Orders over $10 ship free in the U.S. Expedited shipping options available at checkout.</p>
+      <h6>shipping</h6>
+      <p>Orders over $10 ship free in the U.S. Expedited shipping options available at checkout.
+        </p>
     </div>
   </section>
 </div>

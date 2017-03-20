@@ -1,11 +1,14 @@
 require("../reset.css");
 require("./views/home/home.scss");
+require("./views/signIn/signIn.scss");
+require("./views/cart/cart.scss");
 require("./views/products/products.scss");
 require("./views/products/singleProduct.scss");
 require("./directives/nav/nav.scss");
 require("./directives/footer/footer.scss");
 require("./directives/colorCircle/colorCircle.css");
 require("./directives/gelOrCream/gelOrCream.scss");
+require("./directives/quantity/quantity.scss");
 require("./main.js");
 require("./productsSvc.js");
 require("./views/signIn/signIn.js");

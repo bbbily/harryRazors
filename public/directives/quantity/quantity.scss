@@ -1,0 +1,30 @@
+.quantity {
+
+
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 100%;
+    color: #555555;
+  }
+  span {
+    color: #CFCFCF;
+    border: 1px solid #CFCFCF;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 120%;
+  }
+  .minus {
+    padding: 2px 5.5px 2px 6.5px;
+  }
+  .plus {
+    padding: 2px 4px 2px 5px;
+  }
+}

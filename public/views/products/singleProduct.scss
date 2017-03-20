@@ -32,6 +32,11 @@
       color: #929292;
       letter-spacing: 0;
     }
+    span {
+      text-transform: uppercase;
+      color: #666666;
+
+    }
   }
 }
 .info > ul {
@@ -42,4 +47,117 @@
 
 .color-selector {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #929292;
+  padding-top: 20px;
+
+  .color-text > span {
+    padding-bottom: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #929292;
+  padding: 20px 0;
+  align-items: center;
+}
+
+.size-selector {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #929292;
+  padding: 20px 0;
+
+  .size > a {
+    font-size: 120%;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+}
+
+.feature {
+  position: relative;
+}
+
+.feature-img {
+  // width: 100%;
+  // height: 100%;
+
+  img {
+    width:100%;
+    height: 100%;
+    min-height: 400px;
+    border: 0;
+    margin: 0;
+    display: block;
+  }
+}
+.feature-text {
+  width: 380px;
+
+  h3 {
+    font-size: 150%;
+    font-weight: 900;
+    color: #263645;
+    line-height: 1.5em;
+    padding: 20px 0;
+  }
+  p {
+    line-height: 1.5em;
+    letter-spacing: 0;
+    color: #263645;
+  }
+}
+.feature-text-left {
+  position: absolute;
+  top: 25%;
+  left: 100px;
+}
+.feature-text-right {
+  position: absolute;
+  top: 25%;
+  right: 100px;
+}
+
+.product-details {
+  display: flex;
+  padding-bottom: 80px;
+  h6 {
+    text-transform: uppercase;
+    color: #545454;
+    padding: 40px 0;
+  }
+  p {
+    color: #868686;
+    line-height: 1.5em;
+  }
+}
+.product-description {
+  flex: 5;
+  margin: 0 50px;
+}
+.product-shipping {
+  flex: 5;
+  margin: 0 50px;
+}
+
+.add-to-cart {
+  padding: 20px 0;
+  border-top: 1px solid #929292;
+
+  a {
+    background: #E34F30;
+    padding: 15px 50px;
+    color: white;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }

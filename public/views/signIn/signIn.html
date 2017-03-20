@@ -1,42 +1,41 @@
 <div class="signin-wrapper">
-  <div class="create-account">
+  <div class="create-account" ng-show="noAccount">
     <form>
       <h3>Create Account</h3>
       <input type="email" placeholder="Email Address" ng-model="registerEmail">
       <div class="new-cus">
         <span class="on-focus"></span>
-        <span class="on-focus-text"> new customers</span>
+        <span class="on-focus-text">new customers</span>
         <p>Create an account with us for quick
           <br>checkout, to keep track of your order,
           <br>and more.</p>
       </div>
-      <div class="return-cus">
+      <div class="return-cus" ng-click="noAccount = false">
         <span class="on-blur"></span>
-        <span class="on-blur-text"></span>
+        <span class="on-blur-text">returning customers</span>
       </div>
-      <input type="password" ng-model="registerPassword">
+      <input type="password" ng-model="registerPassword" placeholder="Create Password">
       <p>Minimum 8 characters</p>
       <input type="submit" value="create account" ng-click="register()">
-      <a ng-click="goFacebook()">Sign in with Facebook</a>
+      <a href="/auth/facebook/callback">Sign in with Facebook</a>
     </form>
   </div>
-  <div class="login-account">
+  <div class="login-account" ng-hide="noAccount">
     <form>
       <h3>Sign In</h3>
       <input type="email" placeholder="Email Address" ng-model="signInEmail">
-      <div class="new-cus">
+      <div class="new-cus" ng-click="noAccount = true">
         <span class="on-blur"></span>
-        <span class="on-blur-text"> new customers</span>
+        <span class="on-blur-text">new customers</span>
       </div>
       <div class="return-cus">
         <span class="on-focus"></span>
-        <span class="on-focus-text"></span>
+        <span class="on-focus-text">returning customers</span>
       </div>
-      <input type="password" ng-model="signInPassword">
+      <input type="password" ng-model="signInPassword" placeholder="Password">
       <p>Minimum 8 characters</p>
       <input type="submit" value="sign in" ng-click="login()">
       <a href="/auth/facebook/callback">Sign in with Facebook</a>
-      <a>forgot password?</a>
     </form>
   </div>
 </div>

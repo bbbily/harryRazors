@@ -1,0 +1,128 @@
+.cart-container {
+  padding-bottom: 120px;
+  margin: 0 50px;
+  button {
+    font-size: 100%;
+    background: #0A4D6D;
+    padding: 15px 15px;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+    width: 200px;
+    margin: auto;
+    cursor: pointer;
+  }
+}
+
+.cart-header {
+  display: flex;
+  text-transform: uppercase;
+  padding: 50px 0;
+  align-items: center;
+  h2 {
+    flex: 5;
+    font-size: 150%;
+    color: #0A4D6D;
+    font-weight: 900;
+  }
+  div {
+    flex: 2;
+    text-align: right;
+  }
+
+  a {
+    font-size: 90%;
+    flex: 2;
+    color: #0A4D6D;
+  }
+}
+
+.cart-main {
+}
+
+.cart-title > ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  display: flex;
+  padding: 20px 0;
+  font-size: 90%;
+  border-top: 0.8px solid #BFBFBF;
+  border-bottom: 0.8px solid #BFBFBF;
+  text-align: right;
+
+  li {
+    flex: 2;
+  }
+  li:first-child {
+    flex: 6;
+    text-align: left;
+  }
+}
+
+.cart-detail {
+  div > ul {
+    display: flex;
+    font-size: 90%;
+    padding: 20px 0;
+    border-bottom: 0.8px solid #BFBFBF;
+    align-items: center;
+    list-style-type: none;
+    text-align: right;
+
+    li {
+      flex: 2;
+    }
+    li:first-child {
+      text-align: left;
+    }
+    li:nth-child(2) {
+      flex: 4;
+      padding-left: 30px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    li > img {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    text-align: right;
+    padding: 30px 0;
+  }
+  p > span {
+    font-size: 120%;
+    margin-left: 30px;
+  }
+  div {
+    text-align: right;
+  }
+  // div > button {
+  //   font-size: 100%;
+  //   background: #0A4D6D;
+  //   padding: 15px 15px;
+  //   color: white;
+  //   text-transform: uppercase;
+  //   border: none;
+  //   border-radius: 5px;
+  //   letter-spacing: 0.1em;
+  //   width: 200px;
+  // }
+}
+
+.remove {
+  background: #185674;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 120%;
+  padding: 1px 4px 3px 5px;
+  color: white;
+  margin-left: 10px;
+}

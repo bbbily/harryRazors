@@ -125,16 +125,27 @@ angular.module("main").service("productsSvc", function($http) {
   ////////////////////////////cart function .////////////////////////
 
   this.addToCart = function(data, quantity, imgUrl, packSize) {
-    var product = {};
-    product.id = data.id;
-    product.quantity = quantity;
-    product.name = data.name;
-    product.price = data.price;
-    product.showcolor = data.showcolor;
-    product.img_url = imgUrl;
-    product.pack_size = packSize;
-    product.total = data.price * quantity;
-    cart.push(product);
+    var i;
+    for (i=0; i<cart.length; i++) {
+      if (cart[i].img_url == imgUrl) {
+        cart[i].quantity += quantity;
+        cart[i].total = cart[i].price * cart[i].quantity + ".00";
+        break;
+      }
+    }
+    if (i == cart.length) {
+
+      var product = {};
+      product.id = data.id;
+      product.quantity = quantity;
+      product.name = data.name;
+      product.price = data.price + ".00";
+      product.showcolor = data.showcolor;
+      product.img_url = imgUrl;
+      product.pack_size = packSize;
+      product.total = data.price * quantity + ".00";
+      cart.push(product);
+    }
   }
 
   this.getCart = function() {
@@ -145,7 +156,7 @@ angular.module("main").service("productsSvc", function($http) {
     for (var i=0; i<cart.length; i++) {
       if (cart[i].img_url == imgUrl) {
         cart[i].quantity++;
-        cart[i].total = cart[i].price * cart[i].quantity;
+        cart[i].total = cart[i].price * cart[i].quantity + ".00";
         break;
       }
     }
