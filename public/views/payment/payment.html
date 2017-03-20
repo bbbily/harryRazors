@@ -1,0 +1,67 @@
+<div class="payment-container">
+  <div class="payment-header">
+    <ul>
+      <li>1 shipping details</li>
+      <li>></li>
+      <li>2 payment details</li>
+      <li>></li>
+      <li>3 review & confirm</li>
+    </ul>
+  </div>
+  <h2>Checkout</h2>
+  <p>billing profile</p>
+  <div class="payment-details">
+    <form ng-submit="toReview()">
+      <p>credit / debit card </p>
+      <div>
+        <input type="text" placeholder="Card Number" required>
+        <input type="text" placeholder="CVV" required>
+      </div>
+      <div>
+        <select name="month" required placeholder="Month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+        </select>
+        <select name="year" required placeholder="Year">
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+        </select>
+      </div>
+      <p>billing address</p>
+      <p></p>
+      <input type="submit" value="CONTINUE TO REVIEW">
+    </form>
+    <div class="summary">
+      <p>order summary</p>
+      <div class="seperate">
+        <p>subtotal
+        <br>shipping
+        <br>tax
+        <br>total</p>
+        <p>${{subtotal}}
+        <br>free
+        <br>${{tax}}
+        <br>${{total}}</p>
+      </div>
+      <p>Return your products within 30 days of receipt for a full refund. Call us at 888-212-6855 and we'll take care of you.</p>
+    </div>
+  </div>
+</div>

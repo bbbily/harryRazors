@@ -1,8 +1,8 @@
 <div class="signin-wrapper">
   <div class="create-account" ng-show="noAccount">
-    <form>
+    <form ng-submit="register()">
       <h3>Create Account</h3>
-      <input type="email" placeholder="Email Address" ng-model="registerEmail">
+      <input type="email" placeholder="Email Address" ng-model="registerEmail" required>
       <div class="new-cus">
         <span class="on-focus"></span>
         <span class="on-focus-text">new customers</span>
@@ -14,16 +14,16 @@
         <span class="on-blur"></span>
         <span class="on-blur-text">returning customers</span>
       </div>
-      <input type="password" ng-model="registerPassword" placeholder="Create Password">
+      <input type="password" ng-model="registerPassword" placeholder="Create Password" required>
       <p>Minimum 8 characters</p>
       <input type="submit" value="create account" ng-click="register()">
       <a href="/auth/facebook/callback">Sign in with Facebook</a>
     </form>
   </div>
   <div class="login-account" ng-hide="noAccount">
-    <form>
+    <form ng-submit="login()">
       <h3>Sign In</h3>
-      <input type="email" placeholder="Email Address" ng-model="signInEmail">
+      <input type="email" placeholder="Email Address" ng-model="signInEmail" required>
       <div class="new-cus" ng-click="noAccount = true">
         <span class="on-blur"></span>
         <span class="on-blur-text">new customers</span>
@@ -32,7 +32,7 @@
         <span class="on-focus"></span>
         <span class="on-focus-text">returning customers</span>
       </div>
-      <input type="password" ng-model="signInPassword" placeholder="Password">
+      <input type="password" ng-model="signInPassword" placeholder="Password" required>
       <p>Minimum 8 characters</p>
       <input type="submit" value="sign in" ng-click="login()">
       <a href="/auth/facebook/callback">Sign in with Facebook</a>

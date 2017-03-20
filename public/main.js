@@ -1,10 +1,40 @@
-angular.module("main", ["ui.router"])
-  .config(function($stateProvider, $urlRouterProvider) {
+angular.module("main", ["ui.router", "angular-stripe"])
+  .config(function($stateProvider, $urlRouterProvider, stripeProvider) {
+
+    var getUser = function(productsSvc) {
+      return productsSvc.goMe().then(function(result) {
+        console.log('hyu',result);
+        return result;
+      })
+    };
+
+    var limitUser = function(productsSvc, $state) {
+      return productsSvc.goMe().then(function(result) {
+        if (!result)
+          $state.go("home")
+        return result;
+      }).catch(function(err) {
+        $state.go("home")
+      })
+    };
+
+    var limitLogin = function(productsSvc, $state) {
+      return productsSvc.goMe().then(function(result) {
+        if (result)
+          $state.go("home")
+        // return result;
+      })
+    }
+
+
     $stateProvider
       .state("signIn", {
         url: "/signIn",
         templateUrl: "views/signIn/signIn.html",
-        controller: "signInCtrl"
+        controller: "signInCtrl",
+        resolve: {
+          user: limitLogin
+        }
       })
       .state("home", {
         url: "/",
@@ -19,6 +49,15 @@ angular.module("main", ["ui.router"])
         url: "/shipping",
         templateUrl: "views/shipping/shipping.html",
         controller: "shippingCtrl"
+      })
+      .state("payment", {
+        url: "/payment",
+        templateUrl: "views/payment/payment.html",
+        controller: "paymentCtrl"
+      })
+      .state("review", {
+        url: "/review",
+        templateUrl: "views/review/review.html"
       })
       .state("products", {
         url: "/products",
@@ -49,7 +88,10 @@ angular.module("main", ["ui.router"])
       .state("details", {
         url: "/details",
         templateUrl: "views/profile/details.html",
-        controller: "detailsCtrl"
+        controller: "detailsCtrl",
+        resolve: {
+          user: limitUser
+        }
       });
       $urlRouterProvider.otherwise("/");
   })

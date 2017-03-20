@@ -11,7 +11,7 @@ function hashPassword(password) {
 
 module.exports = {
   isAuthed: function(req, res, next) {
-    if (!req.isAuthenticated()) return res.status(401).send("can not get user before login");
+    if (!req.isAuthenticated()) return res.send("can not get user before login");
     else return next();
   },
 
@@ -20,12 +20,12 @@ module.exports = {
     newUser.password = hashPassword(newUser.password);
     newUser.email = newUser.email.toLowerCase();
     db.check_email([newUser.email], function(err, user) {
-      if (err) res.status(400).send(err);
+      if (err) res.status(200).send(err);
       if (user[0]) {
-        return res.status(401).send("This email is existing");
+        return res.status(200).send("This email is existing");
       } else {
         db.add_user([newUser.email, newUser.password], function(err, user) {
-          if (err) res.status(400).send(err);
+          if (err) res.status(200).send(err);
           delete user.password;
           res.status(200).send(user);
         })
@@ -35,7 +35,7 @@ module.exports = {
   },
 
   me: function(req, res, next) {
-    if (!req.user) return res.status(200).send("no user");
+    if (!req.user) return res.status(200).send(false);
     return res.status(200).send(req.user);
   },
 

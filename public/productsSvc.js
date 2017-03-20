@@ -26,12 +26,12 @@ angular.module("main").service("productsSvc", function($http) {
   this.getUserId = function() {
     return userId;
   }
-  this.setHasUser = function(boolean) {
-    hasUser = boolean;
-  }
-  this.getHasUser = function() {
-    return hasUser;
-  }
+  // this.setHasUser = function(boolean) {
+  //   hasUser = boolean;
+  // }
+  // this.getHasUser = function() {
+  //   return hasUser;
+  // }
   this.getAll = function() {
     return $http({
       method: "GET",
@@ -50,7 +50,6 @@ angular.module("main").service("productsSvc", function($http) {
         password: signInPassword
       }
     }).then(function(result) {
-      // console.log("d", result)
       return result.data;
     }).catch(function(err) {
       console.log("err", err)
