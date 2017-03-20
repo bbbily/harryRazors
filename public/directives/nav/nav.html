@@ -12,7 +12,10 @@
     <li class="profile" ng-show="hasUser"><a ui-sref="details">profile</a></li>
     <li class="cart" ui-sref="cart"><a>
       <span class="cart-text">cart</span>
-      <span class="cart-icon"></span>
+      <span class="cart-icon">
+        <span class="cart-items">{{totalQuantity}}</span>
+
+      </span>
     </a></li>
   </ul>
 </nav>

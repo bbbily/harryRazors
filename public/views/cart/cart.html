@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div class="cart-detail">
-      <div class="cart-product" ng-repeat="product in cart">
+      <div class="cart-product" ng-repeat="product in cart track by $index">
         <ul>
           <li><img ng-src="{{product.img_url}}" alt="img_url"></li>
           <li>{{product.name}}</li>
@@ -25,7 +25,7 @@
           </li>
           <li>
             ${{product.total}}
-            <a ng-click="removeQuantity(product.img_url)" class="remove">x</a>
+            <a ng-click="removeQuantity(product.img_url, product.quantity)" class="remove">x</a>
           </li>
         </ul>
       </div>

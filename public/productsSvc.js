@@ -1,7 +1,25 @@
 angular.module("main").service("productsSvc", function($http) {
-  var hasUser = false;
-  var cart = [];
+
+  // var hasUser = false;
+  var totalQuantity = 0;
+  var subtotal = 0;
+  var tax = 0;
+  var total = 0;
   var userId = null;
+  if (JSON.parse(localStorage.getItem("cart"))) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    for (var i=0; i<cart.length; i++) {
+      totalQuantity += cart[i].quantity;
+      subtotal += Number(cart[i].total);
+    }
+    tax = subtotal * 0.08;
+    total = subtotal + tax;
+  }
+  else
+    cart = [];
+  this.getTotalQuantity = function() {
+    return totalQuantity;
+  }
   this.setUserId = function(id) {
     userId = id;
   }
@@ -146,6 +164,8 @@ angular.module("main").service("productsSvc", function($http) {
       product.total = data.price * quantity + ".00";
       cart.push(product);
     }
+    totalQuantity += quantity;
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
 
   this.getCart = function() {
@@ -160,6 +180,8 @@ angular.module("main").service("productsSvc", function($http) {
         break;
       }
     }
+    totalQuantity++;
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
   this.minusQuantity = function(imgUrl) {
     for (var i=0; i<cart.length; i++) {
@@ -169,13 +191,35 @@ angular.module("main").service("productsSvc", function($http) {
         break;
       }
     }
+    totalQuantity--;
+    localStorage.setItem("cart", JSON.stringify(cart));
   }
-  this.removeQuantity = function(imgUrl) {
+  this.removeQuantity = function(imgUrl, quantity) {
     for (var i=0; i<cart.length; i++) {
       if (cart[i].img_url == imgUrl) {
         cart.splice(i, 1);
         break;
       }
     }
+    totalQuantity -= quantity;
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  this.setSubtotal = function(sub) {
+    subtotal = sub;
+    tax = subtotal * 0.08;
+    total = subtotal + tax;
+  }
+
+
+  /////////////////////////////////shipping /////////////////////////////////
+
+  this.getSubtotal = function() {
+    return Number(subtotal).toFixed(2);
+  }
+  this.getTax = function() {
+    return Number(tax).toFixed(2);
+  }
+  this.getTotal = function() {
+    return Number(total).toFixed(2);
   }
 })

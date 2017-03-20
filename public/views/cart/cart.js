@@ -1,10 +1,13 @@
 angular.module("main").controller("cartCtrl", function($scope, $state, productsSvc) {
-  $scope.getCart = function() {
+  $scope.setSubtotal = function() {
     $scope.subtotal = 0;
-    $scope.cart = productsSvc.getCart();
-    // $scope.subtotal = $scope.cart.reduce(function(a.total, b.total) {return a.total + b.total;}, 0);
     for (var i=0; i<$scope.cart.length; i++)
       $scope.subtotal += Number($scope.cart[i].total);
+    productsSvc.setSubtotal($scope.subtotal);
+  }
+  $scope.getCart = function() {
+    $scope.cart = productsSvc.getCart();
+    $scope.setSubtotal();
   }
   $scope.getCart();
 
@@ -17,22 +20,16 @@ angular.module("main").controller("cartCtrl", function($scope, $state, productsS
 
   $scope.addQuantity = function(imgUrl) {
     productsSvc.addQuantity(imgUrl);
-    $scope.subtotal = 0;
-    for (var i=0; i<$scope.cart.length; i++)
-      $scope.subtotal += Number($scope.cart[i].total);
+    $scope.setSubtotal();
   }
   $scope.minusQuantity = function(imgUrl, quantity) {
     if (quantity > 1) {
       productsSvc.minusQuantity(imgUrl);
-      $scope.subtotal = 0;
-      for (var i=0; i<$scope.cart.length; i++)
-        $scope.subtotal += Number($scope.cart[i].total);
+      $scope.setSubtotal();
     }
   }
-  $scope.removeQuantity = function(imgUrl) {
-      productsSvc.removeQuantity(imgUrl);
-      $scope.subtotal = 0;
-      for (var i=0; i<$scope.cart.length; i++)
-        $scope.subtotal += Number($scope.cart[i].total);
+  $scope.removeQuantity = function(imgUrl, quantity) {
+      productsSvc.removeQuantity(imgUrl, quantity);
+      $scope.setSubtotal();
   }
 })

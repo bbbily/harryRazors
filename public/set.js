@@ -4,6 +4,7 @@ require("./views/signIn/signIn.scss");
 require("./views/cart/cart.scss");
 require("./views/products/products.scss");
 require("./views/products/singleProduct.scss");
+require("./views/shipping/shipping.scss");
 require("./directives/nav/nav.scss");
 require("./directives/footer/footer.scss");
 require("./directives/colorCircle/colorCircle.css");
