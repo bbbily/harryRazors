@@ -4,8 +4,11 @@ angular.module("main").controller("signInCtrl", function($scope, productsSvc, $s
       console.log("user", result);
       $scope.user = result;
       if ($scope.user) {
-        console.log("go");
-        $state.go("details");
+        console.log(productsSvc.getReady())
+        if (productsSvc.getReady())
+          $state.go("shipping");
+        else
+          $state.go("details");
       } else {
         $scope.signInEmail = "";
         $scope.signInPassword = "";

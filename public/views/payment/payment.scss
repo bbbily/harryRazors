@@ -1,0 +1,83 @@
+.payment-header > ul {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  padding: 50px 0;
+  list-style-type: none;
+  color: #BFBFBF;
+  font-size: 85%;
+  text-transform: uppercase;
+}
+
+.payment-container {
+  margin: 0 50px;
+
+  h2 {
+    font-size: 200%;
+    padding: 30px 0;
+    font-weight: 900;
+  }
+
+  > p {
+    text-transform: uppercase;
+    color: #666666;
+    padding: 10px 0;
+    font-size: 90%;
+  }
+}
+
+.payment-details {
+  display: flex;
+  justify-content: space-between;
+  form {
+    margin-right: 60px;
+    flex: 7;
+
+
+    p {
+      padding: 50px 0 20px 0;
+      text-transform: uppercase;
+      color: #666666;
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      select {
+        width: 48%;
+        height: 62px;
+        border-radius: 0;
+        margin: 10px 0;
+        font-size: 100%;
+        // color: #BFBFBF;
+        -webkit-border-radius: 0px;
+        -webkit-appearance: none;
+        background: white;
+      }
+    }
+    input {
+      padding: 20px 0;
+      font-size: 100%;
+      margin: 10px 0;
+    }
+
+    .input1 {
+      width: 68%;
+    }
+    .input2 {
+      width: 28%;
+    }
+    input[type="submit"] {
+      width: 323px;
+      padding: 15px 0;
+      background: #185674;
+      color: white;
+      font-weight: 900;
+      border-color: #185674;
+      border-radius: 5px;
+      letter-spacing: 0.1em;
+      margin: 50px 0;
+    }
+
+  }
+}

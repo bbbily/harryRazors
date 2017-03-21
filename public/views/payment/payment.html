@@ -11,14 +11,15 @@
   <h2>Checkout</h2>
   <p>billing profile</p>
   <div class="payment-details">
-    <form ng-submit="toReview()">
+    <form ng-submit="charge(payment, total)">
       <p>credit / debit card </p>
       <div>
-        <input type="text" placeholder="Card Number" required>
-        <input type="text" placeholder="CVV" required>
+        <input type="text" placeholder="Card Number" required ng-model="payment.card.number" class="input1">
+        <input type="text" placeholder="CVC" required ng-model="payment.card.cvc" class="input2">
       </div>
       <div>
-        <select name="month" required placeholder="Month">
+        <select name="month" required placeholder="Month" ng-model="payment.card.expMonth">
+          <option value="" disabled="" selected="">Month</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -32,7 +33,8 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
         </select>
-        <select name="year" required placeholder="Year">
+        <select name="year" required placeholder="Year" ng-model="payment.card.expYear">
+          <option value="" disabled="" selected="">Year</option>
                 <option value="2017">2017</option>
                 <option value="2018">2018</option>
                 <option value="2019">2019</option>

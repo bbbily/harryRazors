@@ -1,4 +1,6 @@
 var app = require("../server");
+var config = require("../config");
+var stripe = require("stripe")(config.stripeSecret);
 
 var db = app.get("db");
 
@@ -39,6 +41,18 @@ module.exports = {
     db.read_features([id], function(err, features) {
       if (err) console.log(err)
       else res.status(200).send(features);
+    })
+  },
+
+  charge: function(req, res) {
+    console.log(req.body);
+    var charge = stripe.charges.create({
+      amount: Number(req.body.amount) * 100,
+      currency: "usd",
+      source: req.body.payment.token,
+      description: "test charge"
+    }, function(err, charge) {
+      res.status(200).send(charge);
     })
   }
 }

@@ -20,12 +20,15 @@ angular.module("main", ["ui.router", "angular-stripe"])
 
     var limitLogin = function(productsSvc, $state) {
       return productsSvc.goMe().then(function(result) {
-        if (result)
+        if (result) {
+          console.log("result", result)
           $state.go("home")
-        // return result;
+        }
       })
     }
 
+
+    stripeProvider.setPublishableKey("pk_test_qYv07DPj7JIyd40cKEEkQfqx");
 
     $stateProvider
       .state("signIn", {

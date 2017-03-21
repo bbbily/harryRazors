@@ -37,7 +37,7 @@ app.post("/auth/local", passport.authenticate("local", {
   // failureRedirect: "/me"
 }));
 app.post("/register", usersCtrl.register);
-app.put("/update", usersCtrl.isAuthed, usersCtrl.updateProfile);
+app.put("/update",  usersCtrl.updateProfile);
 app.get("/products", productsCtrl.getAll);
 app.get("/products/:id", productsCtrl.getOne);
 app.get("/products/largePics/:id", productsCtrl.getLargePics);
@@ -47,6 +47,7 @@ app.get("/products/features/:id", productsCtrl.getFeatures);
 app.get("/me", usersCtrl.me);
 app.get("/logout", usersCtrl.logout);
 
+app.post("/payment", usersCtrl.isAuthed, productsCtrl.charge);
 
 app.listen(port, function() {
   console.log("listen to port: " + port);

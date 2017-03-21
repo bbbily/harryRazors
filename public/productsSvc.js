@@ -1,4 +1,4 @@
-angular.module("main").service("productsSvc", function($http) {
+angular.module("main").service("productsSvc", function($http, stripe, $state) {
 
   // var hasUser = false;
   var totalQuantity = 0;
@@ -6,6 +6,7 @@ angular.module("main").service("productsSvc", function($http) {
   var tax = 0;
   var total = 0;
   var userId = null;
+  var isReady = false;
   if (JSON.parse(localStorage.getItem("cart"))) {
     cart = JSON.parse(localStorage.getItem("cart"));
     for (var i=0; i<cart.length; i++) {
@@ -26,12 +27,7 @@ angular.module("main").service("productsSvc", function($http) {
   this.getUserId = function() {
     return userId;
   }
-  // this.setHasUser = function(boolean) {
-  //   hasUser = boolean;
-  // }
-  // this.getHasUser = function() {
-  //   return hasUser;
-  // }
+
   this.getAll = function() {
     return $http({
       method: "GET",
@@ -64,6 +60,16 @@ angular.module("main").service("productsSvc", function($http) {
         email: registerEmail,
         password: registerPassword
       }
+    })
+  }
+
+  this.updateUser = function(user) {
+    return $http({
+      method: "PUT",
+      url: "/update",
+      data: user
+    }).then(function(result) {
+      console.log(result)
     })
   }
 
@@ -146,7 +152,7 @@ angular.module("main").service("productsSvc", function($http) {
     for (i=0; i<cart.length; i++) {
       if (cart[i].img_url == imgUrl) {
         cart[i].quantity += quantity;
-        cart[i].total = cart[i].price * cart[i].quantity + ".00";
+        cart[i].total = Number(cart[i].price * cart[i].quantity).toFixed(2);
         break;
       }
     }
@@ -156,11 +162,11 @@ angular.module("main").service("productsSvc", function($http) {
       product.id = data.id;
       product.quantity = quantity;
       product.name = data.name;
-      product.price = data.price + ".00";
+      product.price = Number(data.price).toFixed(2);
       product.showcolor = data.showcolor;
       product.img_url = imgUrl;
       product.pack_size = packSize;
-      product.total = data.price * quantity + ".00";
+      product.total = Number(data.price * quantity).toFixed(2);
       cart.push(product);
     }
     totalQuantity += quantity;
@@ -175,7 +181,7 @@ angular.module("main").service("productsSvc", function($http) {
     for (var i=0; i<cart.length; i++) {
       if (cart[i].img_url == imgUrl) {
         cart[i].quantity++;
-        cart[i].total = cart[i].price * cart[i].quantity + ".00";
+        cart[i].total = Number(cart[i].price * cart[i].quantity).toFixed(2);
         break;
       }
     }
@@ -186,7 +192,7 @@ angular.module("main").service("productsSvc", function($http) {
     for (var i=0; i<cart.length; i++) {
       if (cart[i].img_url == imgUrl) {
         cart[i].quantity--;
-        cart[i].total = cart[i].price * cart[i].quantity;
+        cart[i].total = Number(cart[i].price * cart[i].quantity).toFixed(2);
         break;
       }
     }
@@ -206,11 +212,19 @@ angular.module("main").service("productsSvc", function($http) {
   this.setSubtotal = function(sub) {
     subtotal = sub;
     tax = subtotal * 0.08;
-    total = subtotal + tax;
+    total = Number(subtotal) + Number(tax);
+  }
+
+  this.setReady = function(boolean) {
+    isReady = boolean;
+    console.log(isReady)
+  }
+  this.getReady = function() {
+    return isReady;
   }
 
 
-  /////////////////////////////////shipping /////////////////////////////////
+  /////////////////////////////////shipping payment/////////////////////////////////
 
   this.getSubtotal = function() {
     return Number(subtotal).toFixed(2);
@@ -220,5 +234,28 @@ angular.module("main").service("productsSvc", function($http) {
   }
   this.getTotal = function() {
     return Number(total).toFixed(2);
+  }
+
+  this.charge = function(payment, total) {
+    console.log('sadfsdfasf',payment, total)
+    return stripe.card.createToken(payment.card).then(function(result) {
+      console.log(result.card.last4);
+      payment.card = void 0;
+      payment.token = result.id;
+
+      return $http({
+        method: "POST",
+        url: "/payment",
+        data: {
+          amount: total,
+          payment: payment
+        }
+      })
+    }).then(function(payment) {
+      console.log("payment", payment);
+      $state.go("review");
+    }).catch(function(err) {
+      console.log(err);
+    })
   }
 })

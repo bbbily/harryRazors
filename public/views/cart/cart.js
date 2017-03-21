@@ -3,6 +3,7 @@ angular.module("main").controller("cartCtrl", function($scope, $state, productsS
     $scope.subtotal = 0;
     for (var i=0; i<$scope.cart.length; i++)
       $scope.subtotal += Number($scope.cart[i].total);
+    $scope.subtotal = Number($scope.subtotal).toFixed(2);
     productsSvc.setSubtotal($scope.subtotal);
   }
   $scope.getCart = function() {
@@ -14,8 +15,10 @@ angular.module("main").controller("cartCtrl", function($scope, $state, productsS
   $scope.checkSignIn = function() {
     if (productsSvc.getUserId())
       $state.go("shipping");
-    else
+    else {
+      productsSvc.setReady(true);
       $state.go("signIn");
+    }
   }
 
   $scope.addQuantity = function(imgUrl) {
