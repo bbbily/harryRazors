@@ -1,3 +1,5 @@
+.details {
+}
 .profile-nav {
   height: 52px;
 
@@ -13,6 +15,11 @@
 
 
 .details-container {
+  margin: auto;
+  width: 650px;
+  input {
+    margin: 15px 0;
+  }
   h1 {
     text-transform: uppercase;
     color: #0A4D6D;
@@ -33,5 +40,86 @@
       color: #08292F;
       padding-bottom: 10px;
     }
+
+    input[type="submit"] {
+      color: white;
+      text-transform: uppercase;
+      background: #0A4D6D;
+      padding: 10px 0;
+      width: 190px;
+      border-radius: 5px;
+      border-color: #0A4D6D;
+    }
+
+    form {
+      position: relative;
+    }
+
+    form > span {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      cursor: pointer;
+      color: #929292;
+    }
+  }
+}
+
+.show-view {
+  width: 610px;
+  padding: 30px 20px;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    border-bottom: 1px solid #929292;
+    color: #929292;
+    cursor: pointer;
+  }
+}
+
+.form-view {
+  width: 610px;
+  padding: 30px 20px;
+}
+
+.details-name {
+  .form-view > div {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 48%;
+      padding: 20px 0;
+      font-size: 100%;
+    }
+  }
+}
+
+.details-address {
+  .form-view > div {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 48%;
+      padding: 20px 0;
+      font-size: 100%;
+    }
+    select {
+      width: 48%;
+      height: 62px;
+      font-size: 100%;
+      margin: 15px 0;
+      background: white;
+    }
+  }
+
+  input {
+    width: calc(100% - 4px);
+    padding: 20px 0;
+    font-size: 100%;
   }
 }

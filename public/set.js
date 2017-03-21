@@ -1,5 +1,6 @@
 require("../reset.css");
 require("./views/home/home.scss");
+require("./views/shavePlans/shavePlans.scss");
 require("./views/signIn/signIn.scss");
 require("./views/cart/cart.scss");
 require("./views/products/products.scss");

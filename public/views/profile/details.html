@@ -9,16 +9,18 @@
   <div class="details-container">
     <h1>your details</h1>
     <section class="details-name">
-      <div class="show-view">
+      <div class="show-view" ng-hide="detailsName">
         <h6>name</h6>
         <p>{{userData.user_name}}</p>
-        <span class="edit"></span>
+        <span class="edit" ng-click="detailsName = true">Edit</span>
       </div>
-      <form class="form-view" ng-submit="updateUser()">
+      <form class="form-view" ng-submit="updateUser(); detailsName = false" ng-show="detailsName">
         <h6>name</h6>
-        <input type="text" placeholder="First Name" ng-model="firstName">
-        <input type="text" placeholder="Last Name" ng-model="lastName">
+        <div><input type="text" placeholder="First Name" ng-model="firstName" required>
+        <input type="text" placeholder="Last Name" ng-model="lastName" required>
+        </div>
         <input type="submit" value="save changes">
+        <span ng-click="detailsName = false">X</span>
       </form>
     </section>
     <!-- <section class="details-password">
@@ -36,18 +38,21 @@
       </form>
     </section> -->
     <section class="details-address">
-      <div class="show-view">
+      <div class="show-view" ng-hide="detailsAddress">
         <h6>shipping information</h6>
-        <p></p>
+        <p>{{userData.shipping_name}}
+        <br>{{userData.shipping_address}} {{userData.shipping_aptnum}}
+        <br>{{userData.shipping_city}} {{userData.shipping_state}} {{userData.shipping_zipcode}}</p>
+        <span class="edit" ng-click="detailsAddress = true">Edit</span>
       </div>
-      <form class="form-view" ng-submit="updateUser()">
+      <form class="form-view" ng-submit="updateUser(); detailsAddress = false" ng-show="detailsAddress">
         <h6>shipping information</h6>
-        <input type="text" placeholder="Name" ng-model="userData.shipping_name">
-        <input type="text" placeholder="Address" ng-model="userData.shipping_address">
-        <input type="text" placeholder="Apt / Suite #" ng-model="userData.shipping_aptnum">
-        <input type="text" placeholder="City" ng-model="userData.shipping_city">
-        <select name="shipping-state" id="shipping-state" ng-model="userData.shipping_state">
-          <option value="" disabled="" selected="">State</option>
+        <input type="text" placeholder="Name" ng-model="newUser.shipping_name" required>
+        <input type="text" placeholder="Address" ng-model="newUser.shipping_address" required>
+        <input type="text" placeholder="Apt / Suite #" ng-model="newUser.shipping_aptnum">
+        <input type="text" placeholder="City" ng-model="newUser.shipping_city" required>
+        <div><select name="shipping-state" id="shipping-state" ng-model="newUser.shipping_state" required>
+          <option value="" disabled="" selected="" required>State</option>
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
                 <option value="AZ">AZ</option>
@@ -108,9 +113,10 @@
                 <option value="AE">AE</option>
                 <option value="AP">AP</option>
         </select>
-        <input type="text" placeholder="Zip Code"  ng-model="userData.shipping_zipcode">
-        <input type="text" placeholder="Telephone" ng-model="userData.shipping_tele">
+        <input type="text" placeholder="Zip Code"  ng-model="newUser.shipping_zipcode" required></div>
+        <input type="text" placeholder="Telephone" ng-model="newUser.shipping_tele">
         <input type="submit" value="save changes">
+        <span ng-click="detailsAddress = false">X</span>
       </form>
     </section>
   </div>

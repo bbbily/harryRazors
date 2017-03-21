@@ -41,9 +41,9 @@ module.exports = {
 
   updateProfile: function(req, res, next) {
     var updateUser = req.body;
-    console.log(updateUser, req.user)
-    // updateUser.user_id = req.user.user_id;
-    db.update_profile([updateUser], function(err, user) {
+    // console.log(updateUser, req.user)
+    updateUser.user_id = req.user.user_id;
+    db.users.save(updateUser, function(err, user) {
       if (err) return res.status(200).send(err);
       delete user.password;
       req.user = user;
