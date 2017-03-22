@@ -8,7 +8,7 @@
     <div class="big-pics" ng-repeat="largePic in largePics | filter: product">
       <img ng-src="{{largePic.img_url}}" alt="largePics">
     </div>
-    <div class="info">
+    <div class="info infoLess1100">
       <h3>{{data.name}}</h3>
       <h3>${{data.price}}</h3>
       <ul>
@@ -32,7 +32,36 @@
       </div>
       <add-to-cart-dir></add-to-cart-dir>
     </div>
+
   </section>
+  <div class="info1100px info">
+    <div>
+      <h3>{{data.name}}</h3>
+      <h3>${{data.price}}</h3>
+      <ul>
+        <li><p>Free U.S. Shipping for orders over $10</p></li>
+        <li><p>Available in U.S.</p></li>
+      </ul>
+    </div>
+    <div>
+      <gel-or-cream-dir  ng-show="data.gelorcream"></gel-or-cream-dir>
+      <div class="color-selector" ng-show="data.color">
+        <div class="color-text">
+          <span>color</span>
+        </div>
+        <color-circle-dir></color-circle-dir>
+      </div>
+      <div class="size-selector" ng-show="data.packsize">
+        <span>PACK SIZE</span>
+        <size-dir></size-dir>
+      </div>
+      <div class="quantity-selector" ng-show="data.quantity">
+        <span>quantity</span>
+        <quantity-dir quantity="quantity" add-quantity="addQuantity()" minus-quantity="minusQuantity()"></quantity-dir>
+      </div>
+      <add-to-cart-dir></add-to-cart-dir>
+    </div>
+  </div>
   <section class="product-feature">
     <div class="feature" ng-repeat="feature in features">
       <div class="feature-img">

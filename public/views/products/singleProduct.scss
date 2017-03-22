@@ -11,13 +11,18 @@
       height: 44px;
       width: 44px;
       border: 1px solid #BFBFBF;
+      cursor: pointer;
     }
   }
 
   .big-pics {
     flex: 5;
     height: 100%;
-
+    text-align: center;
+  }
+  .big-pics > img {
+    height: 90%;
+    // width: 100%;
   }
 
   // .big-pics.ng-leave {
@@ -37,26 +42,26 @@
     opacity: 1;
   }
 
-  .info {
-    width: 300px;
-    margin: auto;
-    padding-right: 50px;
-    h3 {
-      padding: 10px 0;
-      font-size: 150%;
-      color: #185674;
-    }
-    p {
-      padding: 10px 0;
-      font-size: 90%;
-      color: #929292;
-      letter-spacing: 0;
-    }
-    span {
-      text-transform: uppercase;
-      color: #666666;
+}
+.info {
+  width: 300px;
+  margin: auto;
+  padding-right: 50px;
+  h3 {
+    padding: 10px 0;
+    font-size: 150%;
+    color: #185674;
+  }
+  p {
+    padding: 10px 0;
+    font-size: 90%;
+    color: #929292;
+    letter-spacing: 0;
+  }
+  span {
+    text-transform: uppercase;
+    color: #666666;
 
-    }
   }
 }
 .info > ul {
@@ -180,4 +185,8 @@
     text-transform: uppercase;
     cursor: pointer;
   }
+}
+
+.info1100px {
+  display: none;
 }

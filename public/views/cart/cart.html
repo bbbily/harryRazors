@@ -28,6 +28,17 @@
             <a ng-click="removeQuantity(product.img_url, product.quantity)" class="remove">x</a>
           </li>
         </ul>
+        <div>
+          <div class="product-img-url"><img ng-src="{{product.img_url}}" alt="img_url"></div>
+          <ul>
+            <li>{{product.name}}</li>
+            <li>${{product.price}} x {{product.quantity}}</li>
+            <li>
+              ${{product.total}}
+              <a ng-click="removeQuantity(product.img_url, product.quantity)" class="remove">x</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <p>subtotal <span>${{subtotal}}</span></p>
       <div>
