@@ -1,4 +1,4 @@
-angular.module("main", ["ui.router", "angular-stripe"])
+angular.module("main", ["ui.router", "angular-stripe", "ngAnimate"])
   .config(function($stateProvider, $urlRouterProvider, stripeProvider) {
 
     var getUser = function(productsSvc) {

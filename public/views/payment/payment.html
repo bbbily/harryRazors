@@ -48,7 +48,9 @@
         </select>
       </div>
       <p>billing address</p>
-      <p></p>
+      <p class="billing-address">{{shipping.name}}
+      <br>{{shipping.address}} {{shipping.aptnum}}
+      <br>{{shipping.city}} {{shipping.state}} {{shipping.zipcode}}</p>
       <input type="submit" value="CONTINUE TO REVIEW">
     </form>
     <div class="summary">
@@ -58,10 +60,7 @@
         <br>shipping
         <br>tax
         <br>total</p>
-        <p>${{subtotal}}
-        <br>free
-        <br>${{tax}}
-        <br>${{total}}</p>
+        <p>${{subtotal}}<br>free<br>${{tax}}<br>${{total}}</p>
       </div>
       <p>Return your products within 30 days of receipt for a full refund. Call us at 888-212-6855 and we'll take care of you.</p>
     </div>

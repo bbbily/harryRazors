@@ -1,4 +1,4 @@
-require("../reset.css");
+require("./reset.css");
 require("./views/home/home.scss");
 require("./views/shavePlans/shavePlans.scss");
 require("./views/signIn/signIn.scss");
@@ -14,6 +14,7 @@ require("./directives/footer/footer.scss");
 require("./directives/colorCircle/colorCircle.css");
 require("./directives/gelOrCream/gelOrCream.scss");
 require("./directives/quantity/quantity.scss");
+require("./media.scss")
 require("./main.js");
 require("./productsSvc.js");
 require("./mainCtrl.js");

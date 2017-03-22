@@ -11,15 +11,15 @@
   <h2>Checkout</h2>
   <p>shipping address</p>
   <div class="shipping-details">
-    <form ng-submit="toPayment()">
-      <div><input type="text" placeholder="Full Name" required></div>
+    <form ng-submit="toPayment(shipping)">
+      <div><input type="text" placeholder="Full Name" required ng-model="shipping.name"></div>
       <div class="twoColumns">
-        <input type="text" placeholder="Address" required>
-        <input type="text" placeholder="Apt / Suite #">
+        <input type="text" placeholder="Address" required ng-model="shipping.address">
+        <input type="text" placeholder="Apt / Suite #" ng-model="shipping.aptnum">
       </div>
       <div class="threeColumns">
-      <input type="text" placeholder="City" required>
-      <select name="state" required>
+      <input type="text" placeholder="City" required ng-model="shipping.city">
+      <select name="state" required ng-model="shipping.state">
         <option value="" disabled="" selected="">State</option>
               <option value="AL">AL</option>
               <option value="AK">AK</option>
@@ -81,9 +81,9 @@
               <option value="AE">AE</option>
               <option value="AP">AP</option>
       </select>
-      <input type="text" placeholder="Zip Code" required>
+      <input type="text" placeholder="Zip Code" required ng-model="shipping.zipcode">
       </div>
-      <div><input type="text" placeholder="Telephone(Optional)"></div>
+      <div><input type="text" placeholder="Telephone(Optional) ng-model="shipping.tele""></div>
       <input type="submit" value="CONTINUE TO PAYMENT">
     </form>
     <div class="summary">

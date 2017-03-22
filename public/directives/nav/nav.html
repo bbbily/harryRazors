@@ -14,9 +14,27 @@
       <span class="cart-text">cart</span>
       <span class="cart-icon">
         <span class="cart-items">{{totalQuantity}}</span>
-
       </span>
     </a></li>
+  </ul>
+
+  <ul class="ham">
+    <li><a class="fa fa-bars" ng-click="showHam = !showHam"></a></li>
+    <li class="home"><a ui-sref="home"></a></li>
+    <li class="cart" ui-sref="cart"><a>
+      <span class="cart-icon">
+        <span class="cart-items">{{totalQuantity}}</span>
+      </span>
+    </a></li>
+  </ul>
+
+  <ul class="ham-dropdown" ng-show="showHam">
+    <li class="shavePlans" ui-sref="shavePlans" ng-click="showHam = false"><a>shave plans</a></li>
+    <li class="products" ui-sref="products" ng-click="showHam = false"><a>products</a></li>
+    <li><a class="about" ng-click="showHam = false">about</a></li>
+    <li class="help" ui-sref="help" ng-click="showHam = false"><a>help</a></li>
+    <li class="signIn" ng-hide="hasUser" ui-sref="signIn" ng-click="showHam = false"><a>signIn</a></li>
+    <li class="profile" ng-show="hasUser" ui-sref="details" ng-click="showHam = false"><a>profile</a></li>
   </ul>
 </nav>
 <div class="clear"></div>

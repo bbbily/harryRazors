@@ -7,8 +7,9 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
   var total = 0;
   var userId = null;
   var isReady = false;
+
   if (JSON.parse(localStorage.getItem("cart"))) {
-    cart = JSON.parse(localStorage.getItem("cart"));
+    var cart = JSON.parse(localStorage.getItem("cart"));
     for (var i=0; i<cart.length; i++) {
       totalQuantity += cart[i].quantity;
       subtotal += Number(cart[i].total);
@@ -17,7 +18,14 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
     total = subtotal + tax;
   }
   else
-    cart = [];
+    var cart = [];
+
+  if (JSON.parse(localStorage.getItem("shipping"))) {
+    var shipping = JSON.parse(localStorage.getItem("shipping"))
+  }
+  else
+    var shipping = {};
+
   this.getTotalQuantity = function() {
     return totalQuantity;
   }
@@ -234,6 +242,14 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
   }
   this.getTotal = function() {
     return Number(total).toFixed(2);
+  }
+
+  this.setShipping = function(obj) {
+    shipping = obj;
+    localStorage.setItem("shipping", JSON.stringify(shipping));
+  }
+  this.getShipping = function() {
+    return shipping;
   }
 
   this.charge = function(payment, total) {

@@ -1,0 +1,81 @@
+@media screen and (max-width: 960px) {
+  .cart-title > ul {
+
+    font-size: 70%;
+
+
+    li {
+      flex: 3;
+    }
+  }
+
+  .cart-detail {
+    div > ul {
+      font-size: 70%;
+      li {
+        flex: 3;
+      }
+      li:first-child {
+        flex: 2;
+      }
+      li:nth-child(2) {
+        flex: 4;
+      }
+    }
+  }
+
+  .learn-more {
+    display: none;
+  }
+
+  .second-hero-text {
+    padding: 100px 200px 100px 50px;
+    width: 220px;
+    font-size: 80%;
+    height: 120px;
+  }
+
+  .works-card {
+    padding: 50px 30px;
+  }
+
+  .quality-container {
+    padding-left: 60%;
+    width: 300px;
+
+    h2 {
+      font-size: 150%;
+    }
+  }
+
+  .descriptions {
+    display:block;
+
+    div {
+      margin: auto;
+      padding-bottom: 50px;
+    }
+  }
+
+  .different > ul {
+    width: auto;
+    li:first-child {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 880px) {
+  .nav-left, .nav-right {
+    display: none;
+  }
+  .hero > a .hero-text {
+    padding: 115px 0 115px 50%;
+  }
+}
+@media screen and (min-width: 881px) {
+  .ham {
+    display: none;
+  }
+}

@@ -1,6 +1,7 @@
 .product-info {
   background: #F7F7F7;
   display: flex;
+  height: 664px;
 
   .small-pics {
     flex: 1;
@@ -15,6 +16,25 @@
 
   .big-pics {
     flex: 5;
+    height: 100%;
+
+  }
+
+  // .big-pics.ng-leave {
+  //   -webkit-transition: 1s;
+  //   transition: 1s;
+  //   opacity: 1;
+  // }
+  // .big-pics.ng-leave-active {
+  //   opacity: 0;
+  // }
+  .big-pics.ng-enter {
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+  }
+  .big-pics.ng-enter-active {
+    opacity: 1;
   }
 
   .info {
