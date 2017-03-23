@@ -70,12 +70,12 @@
     padding: 50px;
   }
 
-  .card-container {
-    display: flex;
-    justify-content: center;
-  }
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+}
 .works-card {
   text-align: center;
   width: 280px;
@@ -152,7 +152,7 @@
 .made-factory {
 }
 .made-factory-container {
-  background: url("https://s3.amazonaws.com/harrypics/products/products/c45edac66ccad6bbd9551bf07cc626b58961b35f.jpg") no-repeat 600px;
+  background: url("https://s3.amazonaws.com/harrypics/products/products/c45edac66ccad6bbd9551bf07cc626b58961b35f.jpg") no-repeat right;
   background-size: contain;
   background-color: #C4CDD0;
   padding: 150px 0;

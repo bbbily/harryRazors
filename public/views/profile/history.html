@@ -23,30 +23,28 @@
       <li>item</li>
       <li>unit price</li>
       <li>quantity</li>
-      <li>product total</li>
+      <li class="date">purchase date</li>
     </ul>
   </div>
   <div class="cart-detail">
     <div class="cart-product" ng-repeat="product in cart track by $index">
       <ul>
-        <li><img ng-src="{{product.img_url}}" alt="img_url"></li>
+        <li><img ng-src="{{product.default_img}}" alt="img_url"></li>
         <li>{{product.name}}</li>
         <li>${{product.price}}</li>
-        <li>
-          <quantity-dir quantity="product.quantity" add-quantity="addQuantity(product.img_url)" minus-quantity="minusQuantity(product.img_url, product.quantity)"></quantity-dir>
+        <li>{{product.product_quantity}}
         </li>
-        <li>
-          ${{product.purchase_date}}
-          <a ng-click="removeQuantity(product.img_url, product.quantity)" class="remove">x</a>
+        <li class="date">
+          {{product.purchase_date}}
         </li>
       </ul>
       <div>
-        <div class="product-img-url"><img ng-src="{{product.img_url}}" alt="img_url"></div>
+        <div class="product-img-url"><img ng-src="{{product.default_img}}" alt="img_url"></div>
         <ul>
           <li>{{product.name}}</li>
-          <li>${{product.price}} x {{product.quantity}}</li>
-          <li>
-            ${{product.purchase_date}}
+          <li>${{product.price}} x {{product.product_quantity}}</li>
+          <li class="date">
+            {{product.purchase_date}}
           </li>
         </ul>
       </div>

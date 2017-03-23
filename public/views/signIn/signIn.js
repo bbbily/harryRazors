@@ -20,6 +20,9 @@ angular.module("main").controller("signInCtrl", function($scope, productsSvc, $s
   $scope.register = function() {
     productsSvc.addUser($scope.registerEmail, $scope.registerPassword).then(function(result) {
       console.log(result);
+      alert(result);
+      $scope.registerEmail = "";
+      $scope.registerPassword = "";
     })
   }
 

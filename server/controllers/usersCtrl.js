@@ -24,10 +24,10 @@ module.exports = {
       if (user[0]) {
         return res.status(200).send("This email is existing");
       } else {
-        db.add_user([newUser.email, newUser.password], function(err, user) {
+        db.add_user([newUser.email, newUser.password, null, null], function(err, user) {
           if (err) res.status(200).send(err);
           delete user.password;
-          res.status(200).send(user);
+          res.status(200).send("sign up successfully!");
         })
 
       }

@@ -68,6 +68,8 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
         email: registerEmail,
         password: registerPassword
       }
+    }).then(function(result) {
+      return result.data;
     })
   }
 
@@ -166,6 +168,8 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
     return $http({
       method: "GET",
       url: "/history/" + id
+    }).then(function(result) {
+      return result.data;
     })
   }
 
