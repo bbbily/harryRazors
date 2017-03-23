@@ -1,1 +1,14 @@
-<p>congratulation!</p>
+<div class="review">
+  <h1>your order has been confirmed!</h1>
+  <div class="review-container">
+    <p>order summary</p>
+    <div class="orders" ng-repeat="order in cart">
+      <ul>
+        <li>{{order.name}}</li>
+        <li>Qty: {{order.quantity}}</li>
+        <li>${{order.price}}</li>
+        <li>${{order.total}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

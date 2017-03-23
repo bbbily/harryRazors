@@ -51,7 +51,10 @@ angular.module("main", ["ui.router", "angular-stripe", "ngAnimate"])
       .state("shipping", {
         url: "/shipping",
         templateUrl: "views/shipping/shipping.html",
-        controller: "shippingCtrl"
+        controller: "shippingCtrl",
+        resolve: {
+          user: limitUser
+        }
       })
       .state("payment", {
         url: "/payment",
@@ -60,7 +63,11 @@ angular.module("main", ["ui.router", "angular-stripe", "ngAnimate"])
       })
       .state("review", {
         url: "/review",
-        templateUrl: "views/review/review.html"
+        templateUrl: "views/review/review.html",
+        controller: "reviewCtrl",
+        resolve: {
+          user: limitUser
+        }
       })
       .state("products", {
         url: "/products",
@@ -86,7 +93,11 @@ angular.module("main", ["ui.router", "angular-stripe", "ngAnimate"])
       })
       .state("history", {
         url: "/history",
-        templateUrl: "views/profile/history.html"
+        templateUrl: "views/profile/history.html",
+        controller: "historyCtrl",
+        resolve: {
+          user: limitUser
+        }
       })
       .state("details", {
         url: "/details",

@@ -237,7 +237,7 @@
       // left: calc(50% - 100px);
     }
 
-    .small-pics .small-pic-container {
+     .small-pic-container {
       margin: 0 5px;
     }
   }
@@ -259,5 +259,13 @@
 
    .quantity-selector > span, .color-selector {
     font-size: 80%;
+  }
+
+  .product-info .small-pics .small-pic-container {
+    margin: 0 1px;
+  }
+
+  .gel-or-cream-text {
+    width: 200px;
   }
 }

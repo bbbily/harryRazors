@@ -54,5 +54,22 @@ module.exports = {
     }, function(err, charge) {
       res.status(200).send(charge);
     })
+  },
+
+  updateCart: function(req, res) {
+    var product = req.body;
+      db.update_cart([product.user_id, product.product_id, product.quantity, product.purchase_date], function(err, cart) {
+        if (err) console.log(err);
+        else res.status(200).send(cart);
+      })
+  },
+
+  getHistory: function(req, res) {
+    var id = req.params.id;
+    db.read_cart([id], function(err, history) {
+      console.log("history",history)
+      if (err) console.log(err);
+      else res.status(200).send(history);
+    })
   }
 }

@@ -107,7 +107,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
 
 
 
-  //////////////////////product function/////////////////////////////
+  //////////////////////product endpoints function/////////////////////////////
 
   this.getType = function(data, text) {
     var result = data.filter(function(product) {
@@ -152,6 +152,22 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
     })
   }
 
+  this.updateCart = function(data) {
+    return $http({
+      method: "POST",
+      url: "/cart",
+      data: data
+    }).then(function(result) {
+      console.log("mamamia", result)
+    })
+  }
+
+  this.getHistory = function(id) {
+    return $http({
+      method: "GET",
+      url: "/history/" + id
+    })
+  }
 
   ////////////////////////////cart function .////////////////////////
 
@@ -183,6 +199,15 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
 
   this.getCart = function() {
     return cart;
+  }
+
+  this.emptyCart = function() {
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  this.emptyQuantity = function() {
+    totalQuantity = 0;
   }
 
   this.addQuantity = function(imgUrl) {

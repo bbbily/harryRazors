@@ -43,6 +43,8 @@ app.get("/products/:id", productsCtrl.getOne);
 app.get("/products/largePics/:id", productsCtrl.getLargePics);
 app.get("/products/smallPics/:id", productsCtrl.getSmallPics);
 app.get("/products/features/:id", productsCtrl.getFeatures);
+app.get("/history/id", productsCtrl.getHistory);
+app.post("/cart", productsCtrl.updateCart);
 
 app.get("/me", usersCtrl.me);
 app.get("/logout", usersCtrl.logout);
