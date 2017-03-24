@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS cart, products, singleproductpics, users;
+DROP TABLE IF EXISTS cart, products, singleproductpics, users
 
 CREATE table products (
     id SERIAL PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE table products (
     default_imgurl text,
     blue_imgurl text,
     green_imgurl text
-    );
+    )
 
 CREATE table users (
     user_id SERIAL PRIMARY KEY,

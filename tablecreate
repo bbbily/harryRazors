@@ -12,20 +12,20 @@ CREATE table products (
     );
 
 
-    CREATE table users (
-        user_id SERIAL PRIMARY KEY,
-        email text,
-        password text,
-        facebook_id integer,
-        user_name varchar(40),
-        shipping_name varchar(40),
-        shipping_address text,
-        shipping_aptnum integer,
-        shipping_city varchar(40),
-        shipping_state varchar(2),
-        shipping_zipcode integer,
-        tele integer
-    )
+CREATE table users (
+    user_id SERIAL PRIMARY KEY,
+    email text,
+    password text,
+    facebook_id integer,
+    user_name varchar(40),
+    shipping_name varchar(40),
+    shipping_address text,
+    shipping_aptnum integer,
+    shipping_city varchar(40),
+    shipping_state varchar(2),
+    shipping_zipcode integer,
+    tele integer
+)
 
 create table cart (
   cart_id SERIAL PRIMARY KEY,
