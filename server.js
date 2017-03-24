@@ -12,6 +12,11 @@ var db = massive.connectSync({
 });
 app.set("db", db);
 
+db.set_schema(function(err, data) {
+  if (err) console.log(err);
+  else console.log('All tables successfully reset');
+})
+
 var passport = require("./service/passport");
 var productsCtrl = require("./controllers/productsCtrl");
 var usersCtrl = require("./controllers/usersCtrl")
@@ -26,10 +31,7 @@ app.use(express.static("./public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-db.set_schema(function(err, data) {
-  if (err) console.log(err);
-  else console.log('All tables successfully reset');
-})
+
 
 
 

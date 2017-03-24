@@ -3,13 +3,19 @@ CREATE table products (
     type text,
     name text,
     price integer,
-    alternative_color boolean,
+    color boolean,
     tag_text text,
     tag_color text,
-    default_imgurl text,
-    blue_imgurl text,
-    green_imgurl text
-    );
+    default_img text,
+    blue_img text,
+    green_img text,
+    quantity boolean,
+    size boolean,
+    packsize boolean,
+    gelorcream boolean,
+    showcolor text,
+    description text
+  );
 
 
 CREATE table users (
@@ -42,6 +48,20 @@ create table features (
  title text,
  text text
 )
+
+
+create table singleproductpics (
+ id SERIAL PRIMARY KEY,
+ product_id integer,
+ name text,
+ index integer,
+   size text,
+   img_url text,
+   showcolor text,
+   gelorcream text,
+   pack_size integer
+);
+
 
 insert into products
 (default_img, blue_img, green_img)
@@ -118,18 +138,6 @@ insert into products
            'The Truman has a weighted core, texturized grip, and rubberized body for maximum control.')
 
 
-
-
-create table singleproductpics (
- id SERIAL PRIMARY KEY,
- product_id integer,
- name text,
- index integer,
-   size text,
-   img_url text,
-   color text,
-   gelorcream text
-)
 
 
 insert into singleproductpics

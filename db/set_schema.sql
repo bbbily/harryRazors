@@ -1,16 +1,22 @@
-DROP TABLE IF EXISTS cart, products, singleproductpics, users;
+DROP TABLE IF EXISTS cart, products, singleproductpics, users, features;
 
 CREATE table products (
     id SERIAL PRIMARY KEY,
     type text,
     name text,
     price integer,
-    alternative_color boolean,
+    color boolean,
     tag_text text,
     tag_color text,
-    default_imgurl text,
-    blue_imgurl text,
-    green_imgurl text
+    default_img text,
+    blue_img text,
+    green_img text,
+    quantity boolean,
+    size boolean,
+    packsize boolean,
+    gelorcream boolean,
+    showcolor text,
+    description text
   );
 
 CREATE table users (
@@ -32,7 +38,8 @@ create table cart (
   cart_id SERIAL PRIMARY KEY,
   user_id integer,
   product_id integer,
-  product_quantity integer
+  product_quantity integer,
+  purchase_date text
 );
 
 create table singleproductpics (
@@ -42,8 +49,9 @@ create table singleproductpics (
  index integer,
    size text,
    img_url text,
-   color text,
-   gelorcream text
+   showcolor text,
+   gelorcream text,
+   pack_size integer
 );
 
 create table features (
@@ -114,7 +122,7 @@ values('Grooming Supplies', 'Harry''s Blades', 2, false, true, false,
         'The Truman has a weighted core, texturized grip, and rubberized body for maximum control.');
 
 insert into singleproductpics
-(product_id, name, index, size, img_url, color, gelorcream)
+(product_id, name, index, size, img_url, showcolor, gelorcream)
 values( 1, 'Truman Set', 0, 'small', 'images/singleProduct/b631304ad383652022c943692cda6c67cde3e695.jpg', 'default', 'gel'),
 (1, 'Truman Set', 0, 'small', 'images/singleProduct/546e51e650619da81caf52ad1dc90e1f5f16ce29.jpg', 'default', 'cream'),
 (1, 'Truman Set', 1, 'small', 'images/singleProduct/3ab5a1caee0a26b9c76b4016cdb8825b68a49505.jpg', 'default', 'cream'),
