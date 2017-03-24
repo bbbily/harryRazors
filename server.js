@@ -7,8 +7,8 @@ var session = require("express-session");
 var app = module.exports = express();
 
 var db = massive.connectSync({
-  connectionString: "postgres://postgres:@localhost/harry"
-  // connectionString: config.elephantsql
+  // connectionString: "postgres://postgres:@localhost/harry"
+  connectionString: config.elephantsql
 });
 app.set("db", db);
 

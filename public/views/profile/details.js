@@ -7,10 +7,13 @@ angular.module("main").controller("detailsCtrl", function($scope, productsSvc, u
   $scope.newUser = {};
   for (var prop in user)
     $scope.newUser[prop] = user[prop];
-  productsSvc.setUserId($scope.userData.user_id);
+  if (user.id)
+    productsSvc.setUserId(user.id);
+  else
+    productsSvc.setUserId($scope.userData.user_id);
   if ($scope.userData.user_name) {
     $scope.firstName = $scope.userData.user_name.split(" ")[0];
-    $scope.lastName = $scope.userData.user_name.split(" ")[1];  
+    $scope.lastName = $scope.userData.user_name.split(" ")[1];
   }
 
   $scope.updateUser = function() {

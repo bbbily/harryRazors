@@ -22,7 +22,7 @@ CREATE table users (
     user_id SERIAL PRIMARY KEY,
     email text,
     password text,
-    facebook_id integer,
+    facebook_id text,
     user_name varchar(40),
     shipping_name varchar(40),
     shipping_address text,

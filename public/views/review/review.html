@@ -4,6 +4,7 @@
     <p>order summary</p>
     <div class="orders" ng-repeat="order in cart">
       <ul>
+        <li>{{order.img_url}}</li>
         <li>{{order.name}}</li>
         <li>Qty: {{order.quantity}}</li>
         <li>${{order.price}}</li>
