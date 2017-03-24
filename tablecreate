@@ -366,6 +366,25 @@ values  (5, 'Blades & Shave Gel', 'large', 'default', 'gel', 8, 0, 'images/singl
         (14, 'Harry''s Travel Kit', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/7c2a60dba3d6eeb6607445a5174b3bfe3fcc63b7.jpg'),
         (14, 'Harry''s Travel Kit', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/3a3b2555bc09b0405921af05e72756e21ae09dcd.jpg'),
         (14, 'Harry''s Travel Kit', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/dcf763af0f5d4335668fc9bb3f52e07fdc05b7f4.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 4, 0, 'images/singleProduct/edffa1d140a9b8d2da243898d62de0300bdc0b4b.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 4, 1, 'images/singleProduct/b1382f1f4061de6167bbbfd9c5221d87082f9295.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 4, 2, 'images/singleProduct/2e32c53464fc90ba5cb07e3a349b5a1393a8eed5.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 8, 0, 'images/singleProduct/78294910ca2ea4b132980519e2e47b0b57d7aca8.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 8, 1, 'images/singleProduct/b1382f1f4061de6167bbbfd9c5221d87082f9295.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 8, 2, 'images/singleProduct/2e32c53464fc90ba5cb07e3a349b5a1393a8eed5.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 16, 0, 'images/singleProduct/b01e0559a15e03d064ff71647acc1c65dddb1fcd.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 16, 1, 'images/singleProduct/b1382f1f4061de6167bbbfd9c5221d87082f9295.jpg'),
+        (15, 'Harry''s Blades', 'large', 'default', 'gel', 16, 2, 'images/singleProduct/2e32c53464fc90ba5cb07e3a349b5a1393a8eed5.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 4, 0, 'images/singleProduct/d3de1a9c3ed57f3ac285f3238599c7b5fac176c0.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 4, 1, 'images/singleProduct/df01b174a4f07e009fff1396e0dc476241ec5359.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 4, 2, 'images/singleProduct/cee63fdaf8e82707d17a6595e08e517d4d8358bf.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 8, 0, 'images/singleProduct/d28f04d3f6043c0f15c73b7873d94295935cce12.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 8, 1, 'images/singleProduct/df01b174a4f07e009fff1396e0dc476241ec5359.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 8, 2, 'images/singleProduct/cee63fdaf8e82707d17a6595e08e517d4d8358bf.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 16, 0, 'images/singleProduct/04b4e422a7626043371144de0f77247f4fc818c4.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 16, 1, 'images/singleProduct/df01b174a4f07e009fff1396e0dc476241ec5359.jpg'),
+        (15, 'Harry''s Blades', 'small', 'default', 'gel', 16, 2, 'images/singleProduct/cee63fdaf8e82707d17a6595e08e517d4d8358bf.jpg');
+
 
 insert into singleproductpics
 (product_id, name, size, showcolor, gelorcream, pack_size, index, img_url)
