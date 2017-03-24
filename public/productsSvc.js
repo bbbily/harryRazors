@@ -41,6 +41,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
       method: "GET",
       url: "/products"
     }).then(function(result) {
+      console.log(result)
       return result.data;
     })
   }

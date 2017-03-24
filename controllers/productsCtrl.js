@@ -7,6 +7,7 @@ var db = app.get("db");
 module.exports = {
   getAll: function(req, res) {
     db.read_products(function(err, products) {
+      console.log(products)
       if (err) console.log(err)
       else res.send(products);
     })
