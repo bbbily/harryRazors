@@ -17,6 +17,11 @@ var productsCtrl = require("./controllers/productsCtrl");
 var usersCtrl = require("./controllers/usersCtrl")
 var port = config.port;
 
+app.use(cors());
+app.use(session({ secret: config.secret}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static("./public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -26,10 +31,7 @@ db.set_schema(function(err, data) {
   else console.log('All tables successfully reset');
 })
 
-app.use(cors());
-app.use(session({ secret: config.secret}));
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 
 
