@@ -5,16 +5,26 @@ var massive = require("massive");
 var config = require("./config");
 var session = require("express-session");
 var app = module.exports = express();
-var conn = massive.connectSync({
-  connectionString: "postgres://postgres:@localhost/harry"
+
+var db = massive.connectSync({
+  // connectionString: "postgres://postgres:@localhost/harry"
+  connectionString: config.elephantsql
 });
-app.set("db", conn);
+app.set("db", db);
+
 var passport = require("./service/passport");
 var productsCtrl = require("./controllers/productsCtrl");
 var usersCtrl = require("./controllers/usersCtrl")
 var port = config.port;
 
+app.use(express.static("./public"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
+db.set_schema(function(err, data) {
+  if (err) console.log(err);
+  else console.log('All tables successfully reset');
+})
 
 app.use(cors());
 app.use(session({ secret: config.secret}));
@@ -22,9 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use(express.static("../public"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+
 // const db = app.get("db");
 
 app.get("/auth/facebook", passport.authenticate("facebook"));
