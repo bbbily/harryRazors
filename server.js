@@ -7,7 +7,7 @@ var session = require("express-session");
 var app = module.exports = express();
 
 var db = massive.connectSync({
-  // connectionString: "postgres://postgres:@localhost/harry"
+  // connectionString: config.pgAdmin
   connectionString: config.elephantsql
 });
 app.set("db", db);
@@ -19,10 +19,10 @@ var productsCtrl = require("./controllers/productsCtrl");
 var usersCtrl = require("./controllers/usersCtrl")
 var port = config.port;
 
-db.set_schema(function(err, data) {
-  if (err) console.log(err);
-  else console.log('All tables successfully reset');
-})
+// db.set_schema(function(err, data) {
+//   if (err) console.log(err);
+//   else console.log('All tables successfully reset');
+// })
 
 app.use(cors());
 app.use(session({ secret: config.secret}));

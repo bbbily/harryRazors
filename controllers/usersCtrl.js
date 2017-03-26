@@ -36,17 +36,19 @@ module.exports = {
 
   me: function(req, res, next) {
     if (!req.user) return res.status(200).send(false);
+    console.log("req.user",req.user)
     return res.status(200).send(req.user);
   },
 
   updateProfile: function(req, res, next) {
     var updateUser = req.body;
-    // console.log(updateUser, req.user)
+    // req.user = req.body;
     updateUser.user_id = req.user.user_id;
     db.users.save(updateUser, function(err, user) {
       if (err) return res.status(200).send(err);
       delete user.password;
       req.user = user;
+      console.log("update",user, req.user)
       res.status(200).send(user);
     })
   },

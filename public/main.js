@@ -3,7 +3,7 @@ angular.module("main", ["ui.router", "angular-stripe", "ngAnimate"])
 
     var getUser = function(productsSvc) {
       return productsSvc.goMe().then(function(result) {
-        console.log('hyu',result);
+        // console.log('hyu',result);
         return result;
       })
     };
@@ -21,7 +21,7 @@ angular.module("main", ["ui.router", "angular-stripe", "ngAnimate"])
     var limitLogin = function(productsSvc, $state) {
       return productsSvc.goMe().then(function(result) {
         if (result) {
-          console.log("result", result)
+          // console.log("result", result)
           $state.go("home")
         }
       })

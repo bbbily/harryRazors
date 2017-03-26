@@ -3,10 +3,10 @@ angular.module("main").controller("detailsCtrl", function($scope, productsSvc, u
   //   productsSvc.goMe().then(function(result) {
       // console.log('hyu',result);
   $scope.userData = user;
-  console.log(user);
+  // console.log(user);
   $scope.newUser = {};
-  for (var prop in user)
-    $scope.newUser[prop] = user[prop];
+  for (var prop in $scope.userData)
+    $scope.newUser[prop] = $scope.userData[prop];
   if (user.id)
     productsSvc.setUserId(user.id);
   else
@@ -17,10 +17,16 @@ angular.module("main").controller("detailsCtrl", function($scope, productsSvc, u
   }
 
   $scope.updateUser = function() {
-    $scope.newUser.user_name = $scope.firstName + " " + $scope.lastName;
+    if ($scope.firstName)
+      $scope.newUser.user_name = $scope.firstName + " " + $scope.lastName;
     for (var prop in $scope.newUser)
       $scope.userData[prop] = $scope.newUser[prop];
-    productsSvc.updateUser($scope.newUser);
+    productsSvc.updateUser($scope.newUser).then(function(result) {
+      // console.log(result)
+      // $scope.userData = result.data;
+      // $scope.firstName = $scope.userData.user_name.split(" ")[0];
+      // $scope.lastName = $scope.userData.user_name.split(" ")[1];
+    });
 
   }
     // })
@@ -33,7 +39,7 @@ angular.module("main").controller("detailsCtrl", function($scope, productsSvc, u
   $scope.signOut = function() {
     productsSvc.setUserId(null);
     productsSvc.logoutUser().then(function(result) {
-      console.log("logou", result);
+      // console.log("logou", result);
     })
   }
 })

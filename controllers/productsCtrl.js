@@ -7,7 +7,7 @@ var db = app.get("db");
 module.exports = {
   getAll: function(req, res) {
     db.read_products(function(err, products) {
-      console.log(products)
+      // console.log(products)
       if (err) console.log(err)
       else res.send(products);
     })
@@ -46,7 +46,7 @@ module.exports = {
   },
 
   charge: function(req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     var charge = stripe.charges.create({
       amount: Number(req.body.amount) * 100,
       currency: "usd",
@@ -68,7 +68,7 @@ module.exports = {
   getHistory: function(req, res) {
     var id = req.params.id;
     db.read_cart([id], function(err, history) {
-      console.log("history",history)
+      // console.log("history",history)
       if (err) console.log(err);
       else res.status(200).send(history);
     })

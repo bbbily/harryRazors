@@ -302,6 +302,17 @@
       margin: 0 5px;
     }
   }
+  .details {
+    .details-container {
+      width: 540px;
+    }
+    .show-view {
+      width: 500px;
+    }
+    .form-view {
+      width: 500px;
+    }
+  }
 }
 
 
@@ -365,5 +376,17 @@
   }
   .cart-detail .cart-product > div ul {
     margin-left: 20px;
+  }
+
+  .details {
+    .details-container {
+      width: 300px;
+    }
+    .show-view {
+      width: 260px;
+    }
+    .form-view {
+      width: 260px;
+    }
   }
 }

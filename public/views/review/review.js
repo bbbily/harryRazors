@@ -1,6 +1,6 @@
 angular.module("main").controller("reviewCtrl", function($scope, productsSvc, user) {
   $scope.cart = productsSvc.getCart();
-  console.log($scope.cart);
+  // console.log($scope.cart);
   var data = {};
   // data.user_id = user.user_id;
   // data.products = [];

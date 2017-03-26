@@ -41,7 +41,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
       method: "GET",
       url: "/products"
     }).then(function(result) {
-      console.log(result)
+      // console.log(result)
       return result.data;
     })
   }
@@ -57,7 +57,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
     }).then(function(result) {
       return result.data;
     }).catch(function(err) {
-      console.log("err", err)
+      // console.log("err", err)
     })
   }
 
@@ -79,9 +79,11 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
       method: "PUT",
       url: "/update",
       data: user
-    }).then(function(result) {
-      console.log(result)
     })
+    // .then(function(result) {
+    //   console.log(result)
+    //   return result;
+    // })
   }
 
   this.goMe = function() {
@@ -103,7 +105,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
       method: "GET",
       url: "/logout"
     }).then(function(result) {
-      console.log("servicelogout", result)
+      // console.log("servicelogout", result)
     })
   }
 
@@ -161,7 +163,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
       url: "/cart",
       data: data
     }).then(function(result) {
-      console.log("mamamia", result)
+      // console.log("mamamia", result)
     })
   }
 
@@ -255,7 +257,7 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
 
   this.setReady = function(boolean) {
     isReady = boolean;
-    console.log(isReady)
+    // console.log(isReady)
   }
   this.getReady = function() {
     return isReady;
@@ -283,9 +285,9 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
   }
 
   this.charge = function(payment, total) {
-    console.log('sadfsdfasf',payment, total)
+    // console.log('sadfsdfasf',payment, total)
     return stripe.card.createToken(payment.card).then(function(result) {
-      console.log(result.card.last4);
+      // console.log(result.card.last4);
       payment.card = void 0;
       payment.token = result.id;
 
@@ -298,10 +300,10 @@ angular.module("main").service("productsSvc", function($http, stripe, $state) {
         }
       })
     }).then(function(payment) {
-      console.log("payment", payment);
+      // console.log("payment", payment);
       $state.go("review");
     }).catch(function(err) {
-      console.log(err);
+      // console.log(err);
     })
   }
 })
