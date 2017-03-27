@@ -15,11 +15,11 @@ function verifyPassword(reqBodyPassword, userPassword) {
 passport.use(new facebookStrategy(config.authClient, function(token, refreshToken, fbuser, done) {
   db.check_facebook_id([fbuser.id], function(err, dbuser) {
     if (err) done(err);
-    // console.log(dbuser)
+    console.log(dbuser)
     if (!dbuser[0])
       db.add_user([null, null, fbuser.id, fbuser.displayName], function(err, user) {
         if (err) done(err);
-        // console.log("fackbookuser", user);
+        console.log("fackbookuser", user);
       })
     else
       fbuser = dbuser[0];

@@ -3,14 +3,14 @@ angular.module("main").controller("singleProductCtrl", function($scope, $statePa
   $scope.getProductById = function(id) {
     productsSvc.getProductById(id).then(function(result) {
       $scope.data = result;
-      console.log(result)
+      // console.log(result)
     })
   }
 
   $scope.getLargePics = function(id) {
     productsSvc.getLargePics(id).then(function(result) {
       $scope.largePics = result;
-      console.log(result);
+      // console.log(result);
     })
   }
 

@@ -47,7 +47,7 @@ module.exports = {
     db.users.save(updateUser, function(err, user) {
       if (err) return res.status(200).send(err);
       delete user.password;
-      req.user = user;
+      req.session.passport.user = user;
       console.log("update",user, req.user)
       res.status(200).send(user);
     })

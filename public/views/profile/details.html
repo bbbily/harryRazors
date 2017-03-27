@@ -11,7 +11,7 @@
     <section class="details-name">
       <div class="show-view" ng-hide="detailsName">
         <h6>name</h6>
-        <p>{{userData.user_name}}</p>
+        <p>{{newUser.user_name}}</p>
         <span class="edit" ng-click="detailsName = true">Edit</span>
       </div>
       <form class="form-view" ng-submit="updateUser(); detailsName = false" ng-show="detailsName">
@@ -40,9 +40,9 @@
     <section class="details-address">
       <div class="show-view" ng-hide="detailsAddress">
         <h6>shipping information</h6>
-        <p>{{userData.shipping_name}}
-        <br>{{userData.shipping_address}} {{userData.shipping_aptnum}}
-        <br>{{userData.shipping_city}} {{userData.shipping_state}} {{userData.shipping_zipcode}}</p>
+        <p>{{newUser.shipping_name}}
+        <br>{{newUser.shipping_address}} {{newUser.shipping_aptnum}}
+        <br>{{newUser.shipping_city}} {{newUser.shipping_state}} {{newUser.shipping_zipcode}}</p>
         <span class="edit" ng-click="detailsAddress = true">Edit</span>
       </div>
       <form class="form-view" ng-submit="updateUser(); detailsAddress = false" ng-show="detailsAddress">
@@ -52,7 +52,7 @@
         <input type="text" placeholder="Apt / Suite #" ng-model="newUser.shipping_aptnum">
         <input type="text" placeholder="City" ng-model="newUser.shipping_city" required>
         <div><select name="shipping-state" id="shipping-state" ng-model="newUser.shipping_state" required>
-          <option value="" disabled="" selected="" required>State</option>
+          <option value="" disabled>State</option>
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
                 <option value="AZ">AZ</option>
